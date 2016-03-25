@@ -55,6 +55,13 @@ header {
     padding: 0.25em 0em;
     font-weight: bold;
     font-style: italic; }
+  header .right-arrow {
+    display: inline-block;
+    font-family: 'fira-mono';
+    font-size: 1.2rem;
+    padding: 0.2em;
+    background-color: #b57614;
+    color: #f2e5bc; }
 
 article {
   width: 70%;
@@ -69,3 +76,7 @@ article {
   article h3 {
     width: inherit;
     border-bottom: 1px solid #458588; }
+
+footer {
+  width: 70%;
+  margin: auto; }

@@ -52,6 +52,15 @@ header {
         font-weight: bold;
         font-style: italic;
     }
+
+    .right-arrow {
+        display: inline-block;
+        font-family: 'fira-mono';
+        font-size: 1.2rem;
+        padding: 0.2em;
+        background-color: $yellow-dark;
+        color: $bg0-darker;
+    }
 }
 
 article {
@@ -71,4 +80,9 @@ article {
         width: inherit;
         border-bottom: 1px solid $blue;
     }
+}
+
+footer {
+    width: 70%;
+    margin: auto;
 }
