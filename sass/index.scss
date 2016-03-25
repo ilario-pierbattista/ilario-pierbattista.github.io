@@ -1,26 +1,56 @@
 @import 'vars';
 
+$header-color : $aqua;
+$text-color: $bg0;
+$background-color: $fg-ligher;
+$anchor-active: $blue;
+$anchor-hover: $purple;
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+
 html {
     font-size: 80%;
 }
 
 body {
     font-family: 'fira-sans';
-    background-color: $fg;
-    color: $bg0-lighter;
-    padding: 4rem, 0rem;
+    background-color: $background-color;
+    color: $text-color;
+    padding: 4rem 0rem;
+}
+
+#{$a-tags} {
+    color: $blue;
+    text-decoration: none;
+    outline: 0;
+}
+
+#{$a-tags-hover} {
+    color: $purple;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+pre {
+    font-family: 'fira-mono';
+    font-size: 0.95rem;
+    padding: 1em;
+    border: 1px dashed $blue;
 }
 
 header {
     width: 70%;
     margin: auto;
-    color: $orange-dark;
-    border-bottom: 1px solid $yellow;
+    color: $header-color;
+    border-bottom: 1px solid $aqua;
 
     h1 {
         font-size: 3rem;
         padding: 0.25em 0em;
         font-weight: bold;
+        font-style: italic;
     }
 }
 
@@ -29,8 +59,16 @@ article {
     margin: auto;
     padding-bottom: 1em;
     border-bottom: 1px solid $blue;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
 
     h1, h2 {
         text-align: center;
+    }
+
+    h3 {
+        width: inherit;
+        border-bottom: 1px solid $blue;
     }
 }

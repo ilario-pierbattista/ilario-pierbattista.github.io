@@ -32,6 +32,12 @@ $purple-dark: #8f3f71;
     src: url('./../fonts/FiraSans-SemiBold.ttf');
     font-weight: bold;
 }
+@font-face {
+    font-family: 'fira-sans';
+    src:url('./../fonts/FiraSans-MediumItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
 
 @font-face {
     font-family: 'fira-mono';

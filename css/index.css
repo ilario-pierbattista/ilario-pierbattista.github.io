@@ -11,6 +11,12 @@
   font-weight: bold; }
 
 @font-face {
+  font-family: 'fira-sans';
+  src: url("./../fonts/FiraSans-MediumItalic.ttf");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
   font-family: 'fira-mono';
   src: url("./../fonts/FiraMono-Regular.ttf"); }
 
@@ -19,24 +25,47 @@ html {
 
 body {
   font-family: 'fira-sans';
-  background-color: #282828;
-  color: #f9f5d7;
-  padding: 4rem, 0rem; }
+  background-color: #3c3836;
+  color: #fbf1c7;
+  padding: 4rem 0rem; }
+
+a, a:active, a:hover, a:visited {
+  color: #458588;
+  text-decoration: none;
+  outline: 0; }
+
+a:active, a:hover {
+  color: #b16286;
+  text-decoration: underline;
+  text-decoration-style: dashed; }
+
+pre {
+  font-family: 'fira-mono';
+  font-size: 0.95rem;
+  padding: 1em;
+  border: 1px dashed #458588; }
 
 header {
   width: 70%;
   margin: auto;
-  color: #af3a03;
-  border-bottom: 1px solid #d79221; }
+  color: #689d6a;
+  border-bottom: 1px solid #689d6a; }
   header h1 {
     font-size: 3rem;
     padding: 0.25em 0em;
-    font-weight: bold; }
+    font-weight: bold;
+    font-style: italic; }
 
 article {
   width: 70%;
   margin: auto;
   padding-bottom: 1em;
-  border-bottom: 1px solid #458588; }
+  border-bottom: 1px solid #458588;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify; }
   article h1, article h2 {
     text-align: center; }
+  article h3 {
+    width: inherit;
+    border-bottom: 1px solid #458588; }
