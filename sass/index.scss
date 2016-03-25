@@ -1,0 +1,17 @@
+
+
+/* Definizione della paletta colori */
+$blue: #458588;
+$blue-dark: #076678;
+$aqua: #689d6a;
+$aqua-dark: #427b58;
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('./../fonts/FiraSans-Regular.ttf');
+}
+
+h1 {
+    font-family: 'fira-sans';
+    color: $blue;
+}

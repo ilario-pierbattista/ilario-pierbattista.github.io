@@ -1,0 +1,8 @@
+/* Definizione della paletta colori */
+@font-face {
+  font-family: 'fira-sans';
+  src: url("./../fonts/FiraSans-Regular.ttf"); }
+
+h1 {
+  font-family: 'fira-sans';
+  color: #458588; }
