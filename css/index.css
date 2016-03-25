@@ -1,8 +1,42 @@
 /* Definizione della paletta colori */
+/* Definizione dei font */
 @font-face {
   font-family: 'fira-sans';
-  src: url("./../fonts/FiraSans-Regular.ttf"); }
+  src: url("./../fonts/FiraSans-Regular.ttf");
+  font-weight: normal; }
 
-h1 {
+@font-face {
   font-family: 'fira-sans';
-  color: #458588; }
+  src: url("./../fonts/FiraSans-SemiBold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'fira-mono';
+  src: url("./../fonts/FiraMono-Regular.ttf"); }
+
+html {
+  font-size: 80%; }
+
+body {
+  font-family: 'fira-sans';
+  background-color: #282828;
+  color: #f9f5d7;
+  padding: 4rem, 0rem; }
+
+header {
+  width: 70%;
+  margin: auto;
+  color: #af3a03;
+  border-bottom: 1px solid #d79221; }
+  header h1 {
+    font-size: 3rem;
+    padding: 0.25em 0em;
+    font-weight: bold; }
+
+article {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #458588; }
+  article h1, article h2 {
+    text-align: center; }

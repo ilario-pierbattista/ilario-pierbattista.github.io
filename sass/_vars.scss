@@ -1,0 +1,39 @@
+/* Definizione della paletta colori */
+$fg: #282828;
+$fg-ligher: #3c3836;
+
+$bg0-lighter: #f9f5d7;
+$bg0: #fbf1c7;
+$bg0-darker: #f2e5bc;
+
+$red: #cc241d;
+$red-dark: #9d0006;
+$orange: #d65d0e;
+$orange-dark: #af3a03;
+$yellow: #d79221;
+$yellow-dark: #b57614;
+$green: #98971a;
+$green-dark: #79740e;
+$aqua: #689d6a;
+$aqua-dark: #427b58;
+$blue: #458588;
+$blue-dark: #076678;
+$purple: #b16286;
+$purple-dark: #8f3f71;
+
+/* Definizione dei font */
+@font-face {
+    font-family: 'fira-sans';
+    src: url('./../fonts/FiraSans-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'fira-sans';
+    src: url('./../fonts/FiraSans-SemiBold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'fira-mono';
+    src: url('./../fonts/FiraMono-Regular.ttf');
+}

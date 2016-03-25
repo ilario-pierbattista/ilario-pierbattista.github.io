@@ -1,17 +1,36 @@
+@import 'vars';
 
-
-/* Definizione della paletta colori */
-$blue: #458588;
-$blue-dark: #076678;
-$aqua: #689d6a;
-$aqua-dark: #427b58;
-
-@font-face {
-    font-family: 'fira-sans';
-    src: url('./../fonts/FiraSans-Regular.ttf');
+html {
+    font-size: 80%;
 }
 
-h1 {
+body {
     font-family: 'fira-sans';
-    color: $blue;
+    background-color: $fg;
+    color: $bg0-lighter;
+    padding: 4rem, 0rem;
+}
+
+header {
+    width: 70%;
+    margin: auto;
+    color: $orange-dark;
+    border-bottom: 1px solid $yellow;
+
+    h1 {
+        font-size: 3rem;
+        padding: 0.25em 0em;
+        font-weight: bold;
+    }
+}
+
+article {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $blue;
+
+    h1, h2 {
+        text-align: center;
+    }
 }
