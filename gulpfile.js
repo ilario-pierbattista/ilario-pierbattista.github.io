@@ -3,6 +3,7 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
     gulp.src("./sass/**/*.scss")
@@ -18,8 +19,19 @@ gulp.task('babel', function() {
     .pipe(gulp.dest('./js/build'));
 });
 
+gulp.task('bower', function() {
+    return plugins.bower({
+        directory: './libs'
+    });
+});
 
-const INDEXPATH = './html/index.json';
+gulp.task('server', function() {
+    var server = require('./static_server.js');
+    server.create().listen(8888);
+});
+
+
+var INDEXPATH = './html/index.json';
 function addHtml(vynil) {
     var indexData = readJsonData(INDEXPATH);
     var identifier = getIdentifier(vynil.relative);
@@ -69,15 +81,4 @@ gulp.task('watcher', function () {
     plugins.watch('./html/**/*.html', {
         events: ['unlink']
     }, removeHtml);
-});
-
-gulp.task('bower', function() {
-    return plugins.bower({
-        directory: './libs'
-    });
-});
-
-gulp.task('server', function() {
-    var server = require('./static_server.js');
-    server.create().listen(8888);
 });
