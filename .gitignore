@@ -1,7 +1,6 @@
 /bower_components/*
 /.sass-cache/*
 *.DS_Store
-/stylesheets/*
 ### Sass template
 .sass-cache/
 *.css.map
