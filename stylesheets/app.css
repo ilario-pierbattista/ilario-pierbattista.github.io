@@ -9791,13 +9791,17 @@ body {
   margin: 15px auto;
   color: #777;
 }
+/* line 99, ../scss/app.scss */
+.profile-card .contacts-details {
+  padding: 5px;
+}
 
-/* line 100, ../scss/app.scss */
+/* line 105, ../scss/app.scss */
 .text-grey {
   color: #777;
 }
 
-/* line 104, ../scss/app.scss */
+/* line 109, ../scss/app.scss */
 hr {
   size: 0;
   border-color: #e6e6e6;

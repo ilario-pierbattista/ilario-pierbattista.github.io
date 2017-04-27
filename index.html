@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
     <link rel="stylesheet" href="stylesheets/app.css"/>
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/typed.js/dist/typed.min.js"></script>
+    <script>
+        $(function(){
+            $("#professional-title").typed({
+                strings: [
+                    "Sollevatore di Polemiche",
+                    "Lanciatore di Coriandoli",
+                    "Lettore di Scatole di Cereali"
+                ],
+                typeSpeed: 0,
+                loop: true
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="row main clearfix">
@@ -14,11 +29,15 @@
         <section class="profile-card">
             <div class="profile-pic"></div>
             <h3 class="name text-center">Ilario Pierbattista</h3>
-            <h5 class="title text-center">Sollevatore di Polemiche</h5>
+            <h5 class="title text-center">
+                <span id="professional-title"></span>
+            </h5>
             <hr />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus atque dignissimos ea
-            eum ex fugiat id iure nihil obcaecati odio optio provident quam quod rem tenetur, ut voluptates
-            voluptatibus!
+            <div class="contacts-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus atque dignissimos ea
+                eum ex fugiat id iure nihil obcaecati odio optio provident quam quod rem tenetur, ut voluptates
+                voluptatibus!
+            </div>
         </section>
     </div>
 
