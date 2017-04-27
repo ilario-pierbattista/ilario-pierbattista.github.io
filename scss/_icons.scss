@@ -1,0 +1,24 @@
+@import "font-awesome";
+
+// General
+.map-marker-icon {
+  @extend .fa, .fa-map-marker;
+}
+
+.email-icon {
+  @extend .fa, .fa-envelope;
+}
+
+.phone-icon {
+  @extend .fa, .fa-phone;
+}
+
+
+// Social
+.github-icon {
+  @extend .fa, .fa-github;
+}
+
+.linkedin-icon {
+  @extend .fa, .fa-linkedin-square;
+}
