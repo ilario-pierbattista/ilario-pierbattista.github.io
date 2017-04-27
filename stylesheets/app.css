@@ -9735,23 +9735,70 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 44, ../scss/app.scss */
+/* line 42, ../scss/app.scss */
 body {
   background-color: #f0f0f0;
-  font-family: "Lato", "Helvetica", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
-/* line 49, ../scss/app.scss */
+/* line 47, ../scss/app.scss */
+.main {
+  padding: 5px;
+  max-width: 100%;
+}
+
+/* line 52, ../scss/app.scss */
 .card-wrapper {
   padding: 5px;
 }
 
-/* line 53, ../scss/app.scss */
-.card {
+/* line 56, ../scss/app.scss */
+.card, .profile-card {
   padding: 5px;
   background-color: #fff;
-  border: 1px;
-  border-style: solid;
-  border-color: #c7c7c7;
+  border: 1px solid #e6e6e6;
   border-radius: 2px;
+}
+
+/* line 66, ../scss/app.scss */
+.profile-card h3, .profile-card h5 {
+  font-family: inherit;
+}
+/* line 70, ../scss/app.scss */
+.profile-card .profile-pic {
+  background: url("../img/profile.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  margin: 30px auto;
+  display: block;
+}
+/* line 85, ../scss/app.scss */
+.profile-card .name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px auto;
+}
+/* line 91, ../scss/app.scss */
+.profile-card .title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 15px auto;
+  color: #777;
+}
+
+/* line 100, ../scss/app.scss */
+.text-grey {
+  color: #777;
+}
+
+/* line 104, ../scss/app.scss */
+hr {
+  size: 0;
+  border-color: #e6e6e6;
 }

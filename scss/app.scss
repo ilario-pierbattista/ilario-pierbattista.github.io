@@ -1,6 +1,5 @@
 @import "settings";
 @import "foundation";
-
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
@@ -38,12 +37,16 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
-
-@import "colors";
+@import "vars";
 
 body {
   background-color: $body-bg-color;
   font-family: "Lato", sans-serif;
+}
+
+.main {
+  padding: 5px;
+  max-width: 100%;
 }
 
 .card-wrapper {
@@ -53,9 +56,52 @@ body {
 .card {
   padding: 5px;
   background-color: $card-bg-color;
-  border: 1px;
-  border-style: solid;
-  border-color: $card-border-color;
+  border: 1px solid $card-border-color;
   border-radius: 2px;
 }
 
+.profile-card {
+  @extend .card;
+
+  h3, h5 {
+    font-family: inherit;
+  }
+
+  .profile-pic {
+    $pic-size: 150px;
+    $margin-bt: 30px;
+    background: url("../img/profile.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: $pic-size;
+    height: $pic-size;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    margin: $margin-bt auto;
+    display: block;
+  }
+
+  .name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 15px auto;
+    color: $text-grey;
+  }
+}
+
+.text-grey {
+  color: $text-grey;
+}
+
+hr {
+  size: 0;
+  border-color: $card-border-color;
+}
