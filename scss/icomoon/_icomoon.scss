@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icomoon-font-path}/icomoon.eot?asjg4w');
-  src:  url('#{$icomoon-font-path}/icomoon.eot?asjg4w#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/icomoon.ttf?asjg4w') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?asjg4w') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?asjg4w#icomoon') format('svg');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?wsaigx');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?wsaigx#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?wsaigx') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?wsaigx') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?wsaigx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,21 @@
     content: $icomoon-phone;
   }
 }
+.icomoon-book-open {
+  &:before {
+    content: $icomoon-book-open;
+  }
+}
+.icomoon-briefcase {
+  &:before {
+    content: $icomoon-briefcase;
+  }
+}
+.icomoon-trophy {
+  &:before {
+    content: $icomoon-trophy;
+  }
+}
 .icomoon-map {
   &:before {
     content: $icomoon-map;
@@ -39,6 +54,31 @@
 .icomoon-envelope {
   &:before {
     content: $icomoon-envelope;
+  }
+}
+.icomoon-telescope {
+  &:before {
+    content: $icomoon-telescope;
+  }
+}
+.icomoon-attachment {
+  &:before {
+    content: $icomoon-attachment;
+  }
+}
+.icomoon-lightbulb {
+  &:before {
+    content: $icomoon-lightbulb;
+  }
+}
+.icomoon-profile-male {
+  &:before {
+    content: $icomoon-profile-male;
+  }
+}
+.icomoon-genius {
+  &:before {
+    content: $icomoon-genius;
   }
 }
 
