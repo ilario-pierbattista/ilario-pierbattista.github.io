@@ -17594,7 +17594,7 @@ header {
 .content-card .cvsection .icon {
   display: table-cell;
   padding: 10px 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 /* line 196, ../scss/app.scss */
 .content-card .cvsection .info {
