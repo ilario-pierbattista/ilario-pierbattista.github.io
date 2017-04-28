@@ -9750,7 +9750,7 @@ th.hide-for-touch {
   font-style: normal;
 }
 /* line 4, ../bower_components/font-awesome/scss/_core.scss */
-.fa, .map-marker-icon, .email-icon, .phone-icon, .github-icon, .linkedin-icon {
+.fa, .github-icon, .linkedin-icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -9835,11 +9835,11 @@ th.hide-for-touch {
 }
 
 /* line 14, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.fa-pull-left, .fa-pull-left.map-marker-icon, .fa-pull-left.email-icon, .fa-pull-left.phone-icon, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon {
+.fa.fa-pull-left, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon {
   margin-right: .3em;
 }
 /* line 15, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.fa-pull-right, .fa-pull-right.map-marker-icon, .fa-pull-right.email-icon, .fa-pull-right.phone-icon, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon {
+.fa.fa-pull-right, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon {
   margin-left: .3em;
 }
 
@@ -9855,11 +9855,11 @@ th.hide-for-touch {
 }
 
 /* line 23, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.pull-left, .pull-left.map-marker-icon, .pull-left.email-icon, .pull-left.phone-icon, .pull-left.github-icon, .pull-left.linkedin-icon {
+.fa.pull-left, .pull-left.github-icon, .pull-left.linkedin-icon {
   margin-right: .3em;
 }
 /* line 24, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.pull-right, .pull-right.map-marker-icon, .pull-right.email-icon, .pull-right.phone-icon, .pull-right.github-icon, .pull-right.linkedin-icon {
+.fa.pull-right, .pull-right.github-icon, .pull-right.linkedin-icon {
   margin-left: .3em;
 }
 
@@ -10292,7 +10292,7 @@ th.hide-for-touch {
 }
 
 /* line 72, ../bower_components/font-awesome/scss/_icons.scss */
-.fa-map-marker:before, .map-marker-icon:before {
+.fa-map-marker:before {
   content: "";
 }
 
@@ -10692,7 +10692,7 @@ th.hide-for-touch {
 }
 
 /* line 156, ../bower_components/font-awesome/scss/_icons.scss */
-.fa-phone:before, .phone-icon:before {
+.fa-phone:before {
   content: "";
 }
 
@@ -10994,7 +10994,7 @@ th.hide-for-touch {
 }
 
 /* line 226, ../bower_components/font-awesome/scss/_icons.scss */
-.fa-envelope:before, .email-icon:before {
+.fa-envelope:before {
   content: "";
 }
 
@@ -13485,6 +13485,43 @@ th.hide-for-touch {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?asjg4w");
+  src: url("../fonts/icomoon.eot?asjg4w#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?asjg4w") format("truetype"), url("../fonts/icomoon.woff?asjg4w") format("woff"), url("../fonts/icomoon.svg?asjg4w#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 14, ../scss/icomoon/_icomoon.scss */
+[class^="icomoon-"], [class*=" icomoon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 30, ../scss/icomoon/_icomoon.scss */
+.icomoon-phone:before {
+  content: "";
+}
+
+/* line 35, ../scss/icomoon/_icomoon.scss */
+.icomoon-map:before {
+  content: "";
+}
+
+/* line 40, ../scss/icomoon/_icomoon.scss */
+.icomoon-envelope:before {
+  content: "";
 }
 
 /*!
@@ -13501,7 +13538,7 @@ th.hide-for-touch {
   font-style: normal;
 }
 /* line 4, ../bower_components/font-awesome/scss/_core.scss */
-.fa, .map-marker-icon, .email-icon, .phone-icon, .github-icon, .linkedin-icon {
+.fa, .github-icon, .linkedin-icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -13586,11 +13623,11 @@ th.hide-for-touch {
 }
 
 /* line 14, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.fa-pull-left, .fa-pull-left.map-marker-icon, .fa-pull-left.email-icon, .fa-pull-left.phone-icon, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon {
+.fa.fa-pull-left, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon {
   margin-right: .3em;
 }
 /* line 15, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.fa-pull-right, .fa-pull-right.map-marker-icon, .fa-pull-right.email-icon, .fa-pull-right.phone-icon, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon {
+.fa.fa-pull-right, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon {
   margin-left: .3em;
 }
 
@@ -13606,11 +13643,11 @@ th.hide-for-touch {
 }
 
 /* line 23, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.pull-left, .pull-left.map-marker-icon, .pull-left.email-icon, .pull-left.phone-icon, .pull-left.github-icon, .pull-left.linkedin-icon {
+.fa.pull-left, .pull-left.github-icon, .pull-left.linkedin-icon {
   margin-right: .3em;
 }
 /* line 24, ../bower_components/font-awesome/scss/_bordered-pulled.scss */
-.fa.pull-right, .pull-right.map-marker-icon, .pull-right.email-icon, .pull-right.phone-icon, .pull-right.github-icon, .pull-right.linkedin-icon {
+.fa.pull-right, .pull-right.github-icon, .pull-right.linkedin-icon {
   margin-left: .3em;
 }
 
@@ -14043,7 +14080,7 @@ th.hide-for-touch {
 }
 
 /* line 72, ../bower_components/font-awesome/scss/_icons.scss */
-.fa-map-marker:before, .map-marker-icon:before {
+.fa-map-marker:before {
   content: "";
 }
 
@@ -14443,7 +14480,7 @@ th.hide-for-touch {
 }
 
 /* line 156, ../bower_components/font-awesome/scss/_icons.scss */
-.fa-phone:before, .phone-icon:before {
+.fa-phone:before {
   content: "";
 }
 
@@ -14745,7 +14782,7 @@ th.hide-for-touch {
 }
 
 /* line 226, ../bower_components/font-awesome/scss/_icons.scss */
-.fa-envelope:before, .email-icon:before {
+.fa-envelope:before {
   content: "";
 }
 
@@ -17238,18 +17275,70 @@ th.hide-for-touch {
   clip: auto;
 }
 
-/* line 7, ../scss/app.scss */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?asjg4w");
+  src: url("../fonts/icomoon.eot?asjg4w#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?asjg4w") format("truetype"), url("../fonts/icomoon.woff?asjg4w") format("woff"), url("../fonts/icomoon.svg?asjg4w#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 14, ../scss/icomoon/_icomoon.scss */
+[class^="icomoon-"], [class*=" icomoon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 30, ../scss/icomoon/_icomoon.scss */
+.icomoon-phone:before {
+  content: "";
+}
+
+/* line 35, ../scss/icomoon/_icomoon.scss */
+.icomoon-map:before {
+  content: "";
+}
+
+/* line 40, ../scss/icomoon/_icomoon.scss */
+.icomoon-envelope:before {
+  content: "";
+}
+
+/* line 6, ../scss/_icons.scss */
+.map-marker-icon:before {
+  content: "";
+}
+
+/* line 10, ../scss/_icons.scss */
+.email-icon:before {
+  content: "";
+}
+
+/* line 14, ../scss/_icons.scss */
+.phone-icon:before {
+  content: "";
+}
+
+/* line 10, ../scss/app.scss */
 body {
   background-color: #f0f0f0;
   font-family: "Lato", sans-serif;
 }
 
-/* line 12, ../scss/app.scss */
+/* line 15, ../scss/app.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
 }
 
-/* line 16, ../scss/app.scss */
+/* line 19, ../scss/app.scss */
 hr {
   border: 0;
   border-top: 1px solid #e6e6e6;
@@ -17257,18 +17346,18 @@ hr {
   height: 0;
 }
 
-/* line 23, ../scss/app.scss */
+/* line 26, ../scss/app.scss */
 .main {
   padding: 5px;
   max-width: 100%;
 }
 
-/* line 28, ../scss/app.scss */
+/* line 31, ../scss/app.scss */
 .card-wrapper {
   padding: 5px;
 }
 
-/* line 32, ../scss/app.scss */
+/* line 35, ../scss/app.scss */
 .card, .profile-card, .content-card {
   padding: 5px;
   background-color: #fff;
@@ -17276,18 +17365,18 @@ hr {
   border-radius: 2px;
 }
 
-/* line 39, ../scss/app.scss */
+/* line 42, ../scss/app.scss */
 .text-upper {
   text-transform: uppercase;
 }
 
-/* line 43, ../scss/app.scss */
+/* line 46, ../scss/app.scss */
 header {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 48, ../scss/app.scss */
+/* line 51, ../scss/app.scss */
 .header, .header-flex, .subheader, .content-card .cvsection .title {
   font-size: 18px;
   font-weight: 500;
@@ -17296,39 +17385,39 @@ header {
   margin: 10px 0;
 }
 
-/* line 56, ../scss/app.scss */
+/* line 59, ../scss/app.scss */
 .header-flex {
   display: inline-block;
 }
 
-/* line 61, ../scss/app.scss */
+/* line 64, ../scss/app.scss */
 .subheader, .content-card .cvsection .title {
   font-size: 14px;
   color: #777;
 }
 
-/* line 67, ../scss/app.scss */
+/* line 70, ../scss/app.scss */
 #language-selector {
   display: inline-block;
 }
-/* line 70, ../scss/app.scss */
+/* line 73, ../scss/app.scss */
 #language-selector li {
   display: inline;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 77, ../scss/app.scss */
+/* line 80, ../scss/app.scss */
 #language-selector a {
   padding: 0;
   margin: 0;
 }
-/* line 82, ../scss/app.scss */
+/* line 85, ../scss/app.scss */
 #language-selector li + li:before {
   content: '/';
 }
 
-/* line 90, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 .profile-card .profile-pic {
   background: url("../img/profile.jpg") no-repeat;
   background-size: cover;
@@ -17338,13 +17427,13 @@ header {
   margin: 30px auto;
   display: block;
 }
-/* line 102, ../scss/app.scss */
+/* line 105, ../scss/app.scss */
 .profile-card .name {
   font-size: 24px;
   font-weight: 700;
   margin: 20px auto;
 }
-/* line 108, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .profile-card .title {
   font-size: 14px;
   font-weight: 500;
@@ -17352,18 +17441,18 @@ header {
   margin: 15px auto;
   color: #777;
 }
-/* line 116, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .profile-card .contacts-details {
   border-top: 1px solid #eee;
   padding: 5px;
   display: table;
   width: 100%;
 }
-/* line 122, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .profile-card .contacts-details .detail {
   display: table-row;
 }
-/* line 125, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .profile-card .contacts-details .detail ._cell, .profile-card .contacts-details .detail .icon, .profile-card .contacts-details .detail .info {
   display: table-cell;
   vertical-align: middle;
@@ -17371,12 +17460,13 @@ header {
   font-size: 0.7em;
   padding: 10px 0;
 }
-/* line 133, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 .profile-card .contacts-details .detail .icon {
   font-size: 20px;
   padding: 0 10px;
+  font-family: icomoon;
 }
-/* line 143, ../scss/app.scss */
+/* line 147, ../scss/app.scss */
 .profile-card .contacts-details .detail .info a {
   color: inherit;
   text-decoration: none;
@@ -17384,39 +17474,39 @@ header {
   border-bottom: 1px solid rgba(51, 51, 51, 0);
   transition: border 500ms ease;
 }
-/* line 149, ../scss/app.scss */
+/* line 153, ../scss/app.scss */
 .profile-card .contacts-details .detail .info a:hover {
   border-bottom: 1px solid #333333;
 }
-/* line 157, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 .profile-card .contacts-socials {
   border-top: 1px solid #eee;
   padding: 5px;
 }
-/* line 163, ../scss/app.scss */
+/* line 167, ../scss/app.scss */
 .profile-card .contacts-socials .social-link {
   padding: 5px;
   font-size: 32px;
   color: inherit;
 }
-/* line 168, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .profile-card .contacts-socials .social-link .github-icon {
   color: #171515;
 }
-/* line 172, ../scss/app.scss */
+/* line 176, ../scss/app.scss */
 .profile-card .contacts-socials .social-link .linkedin-icon {
   color: #0077B5;
 }
 
-/* line 179, ../scss/app.scss */
+/* line 183, ../scss/app.scss */
 .content-card {
   padding: 10px 20px;
 }
-/* line 183, ../scss/app.scss */
+/* line 187, ../scss/app.scss */
 .content-card .cvsection {
   padding: 10px 0;
 }
-/* line 190, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 .content-card .cvsection .cventry {
   border-top: 1px solid #e6e6e6;
 }

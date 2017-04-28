@@ -1,18 +1,19 @@
 @import "font-awesome";
+@import "icomoon/variables";
+@import "icomoon/icomoon";
 
 // General
-.map-marker-icon {
-  @extend .fa, .fa-map-marker;
+.map-marker-icon:before {
+  content: $icomoon-map;
 }
 
-.email-icon {
-  @extend .fa, .fa-envelope;
+.email-icon:before {
+  content: $icomoon-envelope;
 }
 
-.phone-icon {
-  @extend .fa, .fa-phone;
+.phone-icon:before {
+  content: $icomoon-phone;
 }
-
 
 // Social
 .github-icon {

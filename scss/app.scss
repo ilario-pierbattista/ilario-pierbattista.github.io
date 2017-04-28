@@ -1,8 +1,11 @@
 @import "settings";
 @import "foundation";
 @import "font-awesome";
+@import "icomoon/icomoon";
 @import "vars";
 @import "icons";
+
+
 
 body {
   background-color: $body-bg-color;
@@ -134,6 +137,7 @@ header {
         @extend ._cell, .text-center;
         font-size: 20px;
         padding: 0 10px;
+        font-family: icomoon;
       }
 
       .info {
