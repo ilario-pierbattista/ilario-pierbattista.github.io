@@ -12,7 +12,7 @@ module.exports = function( grunt ) {
             ' * Available under the BSD and MIT licenses: www.modernizr.com/license/\n */'
         },
         qunit: {
-            files: ['test/sample-index.html']
+            files: ['test/index.html']
         },
         lint: {
             files: [
