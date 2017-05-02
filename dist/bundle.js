@@ -11,20 +11,39 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = undefined && undefined.__metadata || function (k, v) {
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var translate_service_1 = require("./translate/translate.service");
 var AppComponent = function () {
-    function AppComponent() {}
+    function AppComponent(_translate) {
+        this._translate = _translate;
+    }
+    AppComponent.prototype.ngOnInit = function () {
+        this.supportedLanguages = [{ display: 'Italiano', iso_code: 'IT', value: 'it' }, { display: 'English', iso_code: 'EN', value: 'en' }];
+        this.selectLang('it');
+    };
+    AppComponent.prototype.isCurrentLang = function (lang) {
+        return lang === this._translate.currentLang;
+    };
+    AppComponent.prototype.selectLang = function (lang) {
+        this._translate.use(lang);
+        this.refreshText();
+    };
+    AppComponent.prototype.refreshText = function () {
+        this.translatedText = this._translate.instant('hello world');
+    };
     return AppComponent;
 }();
 AppComponent = __decorate([core_1.Component({
     selector: 'app',
-    templateUrl: 'templates/main.html',
-    styleUrls: ['stylesheets/app.css']
-})], AppComponent);
+    templateUrl: 'templates/main.html'
+}), __metadata("design:paramtypes", [translate_service_1.TranslateService])], AppComponent);
 exports.AppComponent = AppComponent;
 
-},{"@angular/core":6}],2:[function(require,module,exports){
+},{"./translate/translate.service":7,"@angular/core":11}],2:[function(require,module,exports){
 "use strict";
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -41,18 +60,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var translate_pipe_1 = require("./translate/translate.pipe");
+var translate_service_1 = require("./translate/translate.service");
+var translations_1 = require("./translate/translations");
 var AppModule = function () {
     function AppModule() {}
     return AppModule;
 }();
 AppModule = __decorate([core_1.NgModule({
     imports: [platform_browser_1.BrowserModule],
-    declarations: [app_component_1.AppComponent],
-    bootstrap: [app_component_1.AppComponent]
+    declarations: [app_component_1.AppComponent, translate_pipe_1.TranslatePipe],
+    bootstrap: [app_component_1.AppComponent],
+    providers: [translations_1.TRANSLATION_PROVIDERS, translate_service_1.TranslateService]
 })], AppModule);
 exports.AppModule = AppModule;
 
-},{"./app.component":1,"@angular/core":6,"@angular/platform-browser":8}],3:[function(require,module,exports){
+},{"./app.component":1,"./translate/translate.pipe":6,"./translate/translate.service":7,"./translate/translations":8,"@angular/core":11,"@angular/platform-browser":13}],3:[function(require,module,exports){
 "use strict";
 ///<reference path="../node_modules/@angular/platform-browser/src/browser.d.ts" />
 
@@ -63,7 +86,139 @@ var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var app_module_1 = require("./app.module");
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 
-},{"./app.module":2,"@angular/platform-browser-dynamic":7,"reflect-metadata":10,"zone.js":44}],4:[function(require,module,exports){
+},{"./app.module":2,"@angular/platform-browser-dynamic":12,"reflect-metadata":15,"zone.js":49}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LANG_EN_NAME = 'en';
+exports.LANG_EN_TRANS = {
+    // Titoli
+    'background': 'Background',
+    'about': 'About',
+    'education': 'Education',
+    'experience': 'Work',
+    // Informazioni di profilo
+    'location': 'Monte Urano (FM), 63813, Italy'
+};
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LANG_IT_NAME = 'it';
+exports.LANG_IT_TRANS = {
+    // Titoli
+    'background': 'Profilo',
+    'about': 'Presentazione',
+    'education': 'Istruzione',
+    'experience': 'Esperienza',
+    // Informazioni di profilo
+    'location': 'Monte Urano (FM), 63813'
+};
+
+},{}],6:[function(require,module,exports){
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = undefined && undefined.__metadata || function (k, v) {
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var translate_service_1 = require("./translate.service");
+var TranslatePipe = function () {
+    function TranslatePipe(_translate) {
+        this._translate = _translate;
+    }
+    TranslatePipe.prototype.transform = function (value, args) {
+        if (!value) return;
+        return this._translate.instant(value);
+    };
+    return TranslatePipe;
+}();
+TranslatePipe = __decorate([core_1.Pipe({
+    name: 'translate',
+    pure: false
+}), __metadata("design:paramtypes", [translate_service_1.TranslateService])], TranslatePipe);
+exports.TranslatePipe = TranslatePipe;
+
+},{"./translate.service":7,"@angular/core":11}],7:[function(require,module,exports){
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = undefined && undefined.__metadata || function (k, v) {
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = undefined && undefined.__param || function (paramIndex, decorator) {
+    return function (target, key) {
+        decorator(target, key, paramIndex);
+    };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var translations_1 = require("./translations"); // import our opaque token
+var TranslateService = function () {
+    function TranslateService(_translations) {
+        this._translations = _translations;
+    }
+    Object.defineProperty(TranslateService.prototype, "currentLang", {
+        get: function get() {
+            return this._currentLang;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    TranslateService.prototype.use = function (lang) {
+        this._currentLang = lang;
+    };
+    TranslateService.prototype.translate = function (key) {
+        // private perform translation
+        var translation = key;
+        if (this._translations[this.currentLang] && this._translations[this.currentLang][key]) {
+            return this._translations[this.currentLang][key];
+        }
+        return translation;
+    };
+    TranslateService.prototype.instant = function (key) {
+        // call translation
+        return this.translate(key);
+    };
+    return TranslateService;
+}();
+TranslateService = __decorate([core_1.Injectable(), __param(0, core_1.Inject(translations_1.TRANSLATIONS)), __metadata("design:paramtypes", [Object])], TranslateService);
+exports.TranslateService = TranslateService;
+
+},{"./translations":8,"@angular/core":11}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var lang_en_1 = require("./lang-en");
+var lang_it_1 = require("./lang-it");
+exports.TRANSLATIONS = new core_1.InjectionToken('translations');
+var dictionary = (_a = {}, _a[lang_it_1.LANG_IT_NAME] = lang_it_1.LANG_IT_TRANS, _a[lang_en_1.LANG_EN_NAME] = lang_en_1.LANG_EN_TRANS, _a);
+exports.TRANSLATION_PROVIDERS = [{ provide: exports.TRANSLATIONS, useValue: dictionary }];
+var _a;
+
+},{"./lang-en":4,"./lang-it":5,"@angular/core":11}],9:[function(require,module,exports){
 /**
  * @license Angular v4.1.0
  * (c) 2010-2017 Google, Inc. https://angular.io/
@@ -4072,7 +4227,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })));
 
 
-},{"@angular/core":6}],5:[function(require,module,exports){
+},{"@angular/core":11}],10:[function(require,module,exports){
 /**
  * @license Angular v4.1.0
  * (c) 2010-2017 Google, Inc. https://angular.io/
@@ -30660,7 +30815,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })));
 
 
-},{"@angular/core":6}],6:[function(require,module,exports){
+},{"@angular/core":11}],11:[function(require,module,exports){
 (function (global){
 /**
  * @license Angular v4.1.0
@@ -44816,7 +44971,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"rxjs/Observable":12,"rxjs/Subject":15,"rxjs/observable/merge":23,"rxjs/operator/share":27}],7:[function(require,module,exports){
+},{"rxjs/Observable":17,"rxjs/Subject":20,"rxjs/observable/merge":28,"rxjs/operator/share":32}],12:[function(require,module,exports){
 /**
  * @license Angular v4.1.0
  * (c) 2010-2017 Google, Inc. https://angular.io/
@@ -44991,7 +45146,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })));
 
 
-},{"@angular/common":4,"@angular/compiler":5,"@angular/core":6,"@angular/platform-browser":8}],8:[function(require,module,exports){
+},{"@angular/common":9,"@angular/compiler":10,"@angular/core":11,"@angular/platform-browser":13}],13:[function(require,module,exports){
 /**
  * @license Angular v4.1.0
  * (c) 2010-2017 Google, Inc. https://angular.io/
@@ -49481,7 +49636,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })));
 
 
-},{"@angular/common":4,"@angular/core":6}],9:[function(require,module,exports){
+},{"@angular/common":9,"@angular/core":11}],14:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -49667,7 +49822,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],10:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 (function (process,global){
 /*! *****************************************************************************
 Copyright (C) Microsoft. All rights reserved.
@@ -50796,7 +50951,7 @@ var Reflect;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"_process":9}],11:[function(require,module,exports){
+},{"_process":14}],16:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -50833,7 +50988,7 @@ var InnerSubscriber = (function (_super) {
 }(Subscriber_1.Subscriber));
 exports.InnerSubscriber = InnerSubscriber;
 
-},{"./Subscriber":17}],12:[function(require,module,exports){
+},{"./Subscriber":22}],17:[function(require,module,exports){
 "use strict";
 var root_1 = require('./util/root');
 var toSubscriber_1 = require('./util/toSubscriber');
@@ -50976,7 +51131,7 @@ var Observable = (function () {
 }());
 exports.Observable = Observable;
 
-},{"./symbol/observable":29,"./util/root":40,"./util/toSubscriber":42}],13:[function(require,module,exports){
+},{"./symbol/observable":34,"./util/root":45,"./util/toSubscriber":47}],18:[function(require,module,exports){
 "use strict";
 exports.empty = {
     closed: true,
@@ -50985,7 +51140,7 @@ exports.empty = {
     complete: function () { }
 };
 
-},{}],14:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -51016,7 +51171,7 @@ var OuterSubscriber = (function (_super) {
 }(Subscriber_1.Subscriber));
 exports.OuterSubscriber = OuterSubscriber;
 
-},{"./Subscriber":17}],15:[function(require,module,exports){
+},{"./Subscriber":22}],20:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -51185,7 +51340,7 @@ var AnonymousSubject = (function (_super) {
 }(Subject));
 exports.AnonymousSubject = AnonymousSubject;
 
-},{"./Observable":12,"./SubjectSubscription":16,"./Subscriber":17,"./Subscription":18,"./symbol/rxSubscriber":30,"./util/ObjectUnsubscribedError":31}],16:[function(require,module,exports){
+},{"./Observable":17,"./SubjectSubscription":21,"./Subscriber":22,"./Subscription":23,"./symbol/rxSubscriber":35,"./util/ObjectUnsubscribedError":36}],21:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -51226,7 +51381,7 @@ var SubjectSubscription = (function (_super) {
 }(Subscription_1.Subscription));
 exports.SubjectSubscription = SubjectSubscription;
 
-},{"./Subscription":18}],17:[function(require,module,exports){
+},{"./Subscription":23}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -51489,7 +51644,7 @@ var SafeSubscriber = (function (_super) {
     return SafeSubscriber;
 }(Subscriber));
 
-},{"./Observer":13,"./Subscription":18,"./symbol/rxSubscriber":30,"./util/isFunction":36}],18:[function(require,module,exports){
+},{"./Observer":18,"./Subscription":23,"./symbol/rxSubscriber":35,"./util/isFunction":41}],23:[function(require,module,exports){
 "use strict";
 var isArray_1 = require('./util/isArray');
 var isObject_1 = require('./util/isObject');
@@ -51683,7 +51838,7 @@ function flattenUnsubscriptionErrors(errors) {
     return errors.reduce(function (errs, err) { return errs.concat((err instanceof UnsubscriptionError_1.UnsubscriptionError) ? err.errors : err); }, []);
 }
 
-},{"./util/UnsubscriptionError":32,"./util/errorObject":33,"./util/isArray":34,"./util/isFunction":36,"./util/isObject":37,"./util/tryCatch":43}],19:[function(require,module,exports){
+},{"./util/UnsubscriptionError":37,"./util/errorObject":38,"./util/isArray":39,"./util/isFunction":41,"./util/isObject":42,"./util/tryCatch":48}],24:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -51806,7 +51961,7 @@ var ArrayObservable = (function (_super) {
 }(Observable_1.Observable));
 exports.ArrayObservable = ArrayObservable;
 
-},{"../Observable":12,"../util/isScheduler":39,"./EmptyObservable":21,"./ScalarObservable":22}],20:[function(require,module,exports){
+},{"../Observable":17,"../util/isScheduler":44,"./EmptyObservable":26,"./ScalarObservable":27}],25:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -51971,7 +52126,7 @@ var RefCountSubscriber = (function (_super) {
     return RefCountSubscriber;
 }(Subscriber_1.Subscriber));
 
-},{"../Observable":12,"../Subject":15,"../Subscriber":17,"../Subscription":18}],21:[function(require,module,exports){
+},{"../Observable":17,"../Subject":20,"../Subscriber":22,"../Subscription":23}],26:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -52053,7 +52208,7 @@ var EmptyObservable = (function (_super) {
 }(Observable_1.Observable));
 exports.EmptyObservable = EmptyObservable;
 
-},{"../Observable":12}],22:[function(require,module,exports){
+},{"../Observable":17}],27:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -52112,12 +52267,12 @@ var ScalarObservable = (function (_super) {
 }(Observable_1.Observable));
 exports.ScalarObservable = ScalarObservable;
 
-},{"../Observable":12}],23:[function(require,module,exports){
+},{"../Observable":17}],28:[function(require,module,exports){
 "use strict";
 var merge_1 = require('../operator/merge');
 exports.merge = merge_1.mergeStatic;
 
-},{"../operator/merge":24}],24:[function(require,module,exports){
+},{"../operator/merge":29}],29:[function(require,module,exports){
 "use strict";
 var Observable_1 = require('../Observable');
 var ArrayObservable_1 = require('../observable/ArrayObservable');
@@ -52263,7 +52418,7 @@ function mergeStatic() {
 }
 exports.mergeStatic = mergeStatic;
 
-},{"../Observable":12,"../observable/ArrayObservable":19,"../util/isScheduler":39,"./mergeAll":25}],25:[function(require,module,exports){
+},{"../Observable":17,"../observable/ArrayObservable":24,"../util/isScheduler":44,"./mergeAll":30}],30:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -52375,7 +52530,7 @@ var MergeAllSubscriber = (function (_super) {
 }(OuterSubscriber_1.OuterSubscriber));
 exports.MergeAllSubscriber = MergeAllSubscriber;
 
-},{"../OuterSubscriber":14,"../util/subscribeToResult":41}],26:[function(require,module,exports){
+},{"../OuterSubscriber":19,"../util/subscribeToResult":46}],31:[function(require,module,exports){
 "use strict";
 var ConnectableObservable_1 = require('../observable/ConnectableObservable');
 /* tslint:enable:max-line-length */
@@ -52433,7 +52588,7 @@ var MulticastOperator = (function () {
 }());
 exports.MulticastOperator = MulticastOperator;
 
-},{"../observable/ConnectableObservable":20}],27:[function(require,module,exports){
+},{"../observable/ConnectableObservable":25}],32:[function(require,module,exports){
 "use strict";
 var multicast_1 = require('./multicast');
 var Subject_1 = require('../Subject');
@@ -52458,7 +52613,7 @@ function share() {
 exports.share = share;
 ;
 
-},{"../Subject":15,"./multicast":26}],28:[function(require,module,exports){
+},{"../Subject":20,"./multicast":31}],33:[function(require,module,exports){
 "use strict";
 var root_1 = require('../util/root');
 function symbolIteratorPonyfill(root) {
@@ -52497,7 +52652,7 @@ exports.iterator = symbolIteratorPonyfill(root_1.root);
  */
 exports.$$iterator = exports.iterator;
 
-},{"../util/root":40}],29:[function(require,module,exports){
+},{"../util/root":45}],34:[function(require,module,exports){
 "use strict";
 var root_1 = require('../util/root');
 function getSymbolObservable(context) {
@@ -52524,7 +52679,7 @@ exports.observable = getSymbolObservable(root_1.root);
  */
 exports.$$observable = exports.observable;
 
-},{"../util/root":40}],30:[function(require,module,exports){
+},{"../util/root":45}],35:[function(require,module,exports){
 "use strict";
 var root_1 = require('../util/root');
 var Symbol = root_1.root.Symbol;
@@ -52535,7 +52690,7 @@ exports.rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'f
  */
 exports.$$rxSubscriber = exports.rxSubscriber;
 
-},{"../util/root":40}],31:[function(require,module,exports){
+},{"../util/root":45}],36:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -52563,7 +52718,7 @@ var ObjectUnsubscribedError = (function (_super) {
 }(Error));
 exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 
-},{}],32:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -52589,48 +52744,48 @@ var UnsubscriptionError = (function (_super) {
 }(Error));
 exports.UnsubscriptionError = UnsubscriptionError;
 
-},{}],33:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 "use strict";
 // typeof any so that it we don't have to cast when comparing a result to the error object
 exports.errorObject = { e: {} };
 
-},{}],34:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 "use strict";
 exports.isArray = Array.isArray || (function (x) { return x && typeof x.length === 'number'; });
 
-},{}],35:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 "use strict";
 exports.isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 
-},{}],36:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 "use strict";
 function isFunction(x) {
     return typeof x === 'function';
 }
 exports.isFunction = isFunction;
 
-},{}],37:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 "use strict";
 function isObject(x) {
     return x != null && typeof x === 'object';
 }
 exports.isObject = isObject;
 
-},{}],38:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 "use strict";
 function isPromise(value) {
     return value && typeof value.subscribe !== 'function' && typeof value.then === 'function';
 }
 exports.isPromise = isPromise;
 
-},{}],39:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 "use strict";
 function isScheduler(value) {
     return value && typeof value.schedule === 'function';
 }
 exports.isScheduler = isScheduler;
 
-},{}],40:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 (function (global){
 "use strict";
 /**
@@ -52647,7 +52802,7 @@ if (!exports.root) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],41:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 "use strict";
 var root_1 = require('./root');
 var isArrayLike_1 = require('./isArrayLike');
@@ -52726,7 +52881,7 @@ function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
 }
 exports.subscribeToResult = subscribeToResult;
 
-},{"../InnerSubscriber":11,"../Observable":12,"../symbol/iterator":28,"../symbol/observable":29,"./isArrayLike":35,"./isObject":37,"./isPromise":38,"./root":40}],42:[function(require,module,exports){
+},{"../InnerSubscriber":16,"../Observable":17,"../symbol/iterator":33,"../symbol/observable":34,"./isArrayLike":40,"./isObject":42,"./isPromise":43,"./root":45}],47:[function(require,module,exports){
 "use strict";
 var Subscriber_1 = require('../Subscriber');
 var rxSubscriber_1 = require('../symbol/rxSubscriber');
@@ -52747,7 +52902,7 @@ function toSubscriber(nextOrObserver, error, complete) {
 }
 exports.toSubscriber = toSubscriber;
 
-},{"../Observer":13,"../Subscriber":17,"../symbol/rxSubscriber":30}],43:[function(require,module,exports){
+},{"../Observer":18,"../Subscriber":22,"../symbol/rxSubscriber":35}],48:[function(require,module,exports){
 "use strict";
 var errorObject_1 = require('./errorObject');
 var tryCatchTarget;
@@ -52767,7 +52922,7 @@ function tryCatch(fn) {
 exports.tryCatch = tryCatch;
 ;
 
-},{"./errorObject":33}],44:[function(require,module,exports){
+},{"./errorObject":38}],49:[function(require,module,exports){
 (function (process,global){
 /**
 * @license
@@ -55020,6 +55175,6 @@ if (_global['PromiseRejectionEvent']) {
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"_process":9}]},{},[3])
+},{"_process":14}]},{},[3])
 
 //# sourceMappingURL=bundle.js.map

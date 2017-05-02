@@ -10,7 +10,7 @@
             <div class="contacts-details clearfix">
                 <div class="detail">
                     <span class="icon map-marker-icon"></span>
-                    <span class="info">Monte Urano (FM) 63813, Italy</span>
+                    <span class="info">{{ 'location' | translate }}</span>
                 </div>
 
                 <div class="detail">
@@ -40,10 +40,13 @@
         <div class="content-card">
 
             <header>
-                <div class="header-flex text-upper">Resume</div>
+                <div class="header-flex text-upper">{{ 'background' | translate }}</div>
                 <ul id="language-selector">
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">EN</a></li>
+                    <li *ngFor="let lang of supportedLanguages; let i=index">
+                        <a href="#?lang={{ lang.value }}" (click)="selectLang(lang.value)" [class.active]="isCurrentLang(lang.value)">
+                            {{lang.iso_code}}
+                        </a>{{i == supportedLanguages.length - 1 ? '' : ' | '}}
+                    </li>
                 </ul>
             </header>
 
@@ -53,7 +56,7 @@
                 <div class="cvsection">
                     <div class="icon"><span class="icomoon-profile-male"></span></div>
                     <div class="info">
-                        <div class="title">ABOUT</div>
+                        <div class="title">{{ 'about' | translate }}</div>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis consectetur cum
                         deleniti
                         dignissimos exercitationem explicabo harum laudantium molestias neque omnis provident quasi
@@ -67,7 +70,7 @@
                 <div class="cvsection">
                     <div class="icon"><span class="icomoon-book-open"></span></div>
                     <div class="info">
-                        <div class="title">EDUCATION</div>
+                        <div class="title">{{ 'education' | translate }}</div>
                         <div class="cventry">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae cupiditate
                             libero
@@ -89,7 +92,7 @@
                 <div class="cvsection">
                     <div class="icon"><span class="icomoon-briefcase"></span></div>
                     <div class="info">
-                        <div class="title">WORK</div>
+                        <div class="title">{{ 'experience' | translate }}</div>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, doloremque ea eveniet explicabo
                         ipsum
                         laudantium minus officia porro quae quo quod reiciendis rem tempora tempore temporibus tenetur

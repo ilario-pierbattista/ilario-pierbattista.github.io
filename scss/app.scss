@@ -17,20 +17,23 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
   border: 0;
-  border-top: 1px solid $card-border-color;
+  border-top: 1px solid $card-hr-color;
   margin: 10px 0;
   height: 0;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
   background-color: transparent;
-  border-bottom: 1px solid rgba($detail-text-color, 0);
+  border-bottom: 1px solid rgba($text-color, 0);
   transition: border 500ms ease;
-  &:hover {
+
+  &:hover, &:link, &:active, &:visited {
     color: inherit;
-    border-bottom: 1px solid rgba($detail-text-color, 1);
+  }
+
+  &:hover {
+    border-bottom: 1px solid rgba($text-color, 1);
   }
 }
 
@@ -90,12 +93,11 @@ header {
   }
 
   a {
-    padding: 0;
-    margin: 0;
+    padding: 0 0.2em;
   }
 
-  li + li:before {
-    content: '/';
+  .active {
+    color: $a-active-color;
   }
 }
 
@@ -105,7 +107,7 @@ header {
   .profile-pic {
     $pic-size: 150px;
     $margin-bt: 30px;
-    background: url("img/profile.jpg") no-repeat;
+    background: url("../img/profile.jpg") no-repeat;
     background-size: cover;
     width: $pic-size;
     height: $pic-size;
@@ -125,11 +127,11 @@ header {
     font-weight: 500;
     line-height: 1.1;
     margin: 15px auto;
-    color: $text-grey;
+    color: $profile-title-color;
   }
 
   .contacts-details {
-    border-top: 1px solid $divider-color;
+    border-top: 1px solid $card-hr-color;
     padding: 5px;
     display: table;
     width: 100%;
@@ -161,7 +163,7 @@ header {
   .contacts-socials {
     @extend .text-center;
 
-    border-top: 1px solid $divider-color;
+    border-top: 1px solid $card-hr-color;
     padding: 5px;
 
     .social-link {
@@ -201,6 +203,7 @@ header {
 
       .title {
         @extend .subheader;
+        text-transform: uppercase;
       }
 
       .cventry {

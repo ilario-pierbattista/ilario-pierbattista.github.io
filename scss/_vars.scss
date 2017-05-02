@@ -2,19 +2,30 @@
 $font-stack: Lato, Helvetica, sans-serif;
 
 // Colors
-$body-bg-color: #f0f0f0;
-$card-bg-color: #fff;
-$card-border-color: #e6e6e6;
+$brightest: #f0f0f0;
+$brighter: #e6e6e6;
+$bright: #e0e0e0;
+$gray: #707070;
+$dark: #333333;
+$darkest: #222222;
 
-$text-grey: #777;
+// Color assignment
+$body-bg-color: $brightest;
 
-$divider-color: #eee;
+$card-bg-color: $white;
+$card-hr-color: $brighter;
+$card-border-color: $brighter;
 
-$header-color: #222222;
-$subheader-color: #777;
+$header-color: $darkest;
+$subheader-color: $gray;
+$text-color: $dark;
 
-$detail-icon-color: #707070;
-$detail-text-color: #333333;
+$a-color: $dark;
+$a-active-color: $gray;
+
+$profile-title-color: $gray;
+$detail-text-color: $dark;
+$detail-icon-color: $gray;
 
 // Icons color
 $github-light-mode: #171515;

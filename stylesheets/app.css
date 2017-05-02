@@ -9744,8 +9744,8 @@ th.hide-for-touch {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -13489,8 +13489,8 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?wsaigx");
-  src: url("fonts/icomoon.eot?wsaigx#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?wsaigx") format("truetype"), url("fonts/icomoon.woff?wsaigx") format("woff"), url("fonts/icomoon.svg?wsaigx#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?wsaigx");
+  src: url("../fonts/icomoon.eot?wsaigx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wsaigx") format("truetype"), url("../fonts/icomoon.woff?wsaigx") format("woff"), url("../fonts/icomoon.svg?wsaigx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -13572,8 +13572,8 @@ th.hide-for-touch {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -17317,8 +17317,8 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?wsaigx");
-  src: url("fonts/icomoon.eot?wsaigx#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?wsaigx") format("truetype"), url("fonts/icomoon.woff?wsaigx") format("woff"), url("fonts/icomoon.svg?wsaigx#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?wsaigx");
+  src: url("../fonts/icomoon.eot?wsaigx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wsaigx") format("truetype"), url("../fonts/icomoon.woff?wsaigx") format("woff"), url("../fonts/icomoon.svg?wsaigx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -17466,49 +17466,51 @@ hr {
 
 /* line 25, ../scss/app.scss */
 a {
-  color: inherit;
   text-decoration: none;
   background-color: transparent;
   border-bottom: 1px solid rgba(51, 51, 51, 0);
   transition: border 500ms ease;
 }
 /* line 31, ../scss/app.scss */
-a:hover {
+a:hover, a:link, a:active, a:visited {
   color: inherit;
+}
+/* line 35, ../scss/app.scss */
+a:hover {
   border-bottom: 1px solid #333333;
 }
 
-/* line 37, ../scss/app.scss */
+/* line 40, ../scss/app.scss */
 .main {
   padding: 5px;
   max-width: 100%;
 }
 
-/* line 42, ../scss/app.scss */
+/* line 45, ../scss/app.scss */
 .card-wrapper {
   padding: 5px;
 }
 
-/* line 46, ../scss/app.scss */
+/* line 49, ../scss/app.scss */
 .card, .profile-card, .content-card {
   padding: 5px;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border: 1px solid #e6e6e6;
   border-radius: 2px;
 }
 
-/* line 53, ../scss/app.scss */
+/* line 56, ../scss/app.scss */
 .text-upper {
   text-transform: uppercase;
 }
 
-/* line 57, ../scss/app.scss */
+/* line 60, ../scss/app.scss */
 header {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 62, ../scss/app.scss */
+/* line 65, ../scss/app.scss */
 .header, .header-flex, .subheader, .content-card .cvsection .info .title {
   font-size: 18px;
   font-weight: 500;
@@ -17517,42 +17519,41 @@ header {
   margin: 10px 0;
 }
 
-/* line 70, ../scss/app.scss */
+/* line 73, ../scss/app.scss */
 .header-flex {
   display: inline-block;
 }
 
-/* line 75, ../scss/app.scss */
+/* line 78, ../scss/app.scss */
 .subheader, .content-card .cvsection .info .title {
   font-size: 16px;
-  color: #777;
+  color: #707070;
 }
 
-/* line 81, ../scss/app.scss */
+/* line 84, ../scss/app.scss */
 #language-selector {
   display: inline-block;
   margin: auto 0;
 }
-/* line 85, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 #language-selector li {
   display: inline;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 92, ../scss/app.scss */
+/* line 95, ../scss/app.scss */
 #language-selector a {
-  padding: 0;
-  margin: 0;
+  padding: 0 0.2em;
 }
-/* line 97, ../scss/app.scss */
-#language-selector li + li:before {
-  content: '/';
+/* line 99, ../scss/app.scss */
+#language-selector .active {
+  color: #707070;
 }
 
-/* line 105, ../scss/app.scss */
+/* line 107, ../scss/app.scss */
 .profile-card .profile-pic {
-  background: url("img/profile.jpg") no-repeat;
+  background: url("../img/profile.jpg") no-repeat;
   background-size: cover;
   width: 150px;
   height: 150px;
@@ -17560,32 +17561,32 @@ header {
   margin: 30px auto;
   display: block;
 }
-/* line 117, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .profile-card .name {
   font-size: 24px;
   font-weight: 700;
   margin: 20px auto;
 }
-/* line 123, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .profile-card .title {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.1;
   margin: 15px auto;
-  color: #777;
+  color: #707070;
 }
-/* line 131, ../scss/app.scss */
+/* line 133, ../scss/app.scss */
 .profile-card .contacts-details {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e6e6e6;
   padding: 5px;
   display: table;
   width: 100%;
 }
-/* line 137, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 .profile-card .contacts-details .detail {
   display: table-row;
 }
-/* line 140, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .profile-card .contacts-details .detail ._cell, .profile-card .contacts-details .detail .icon, .profile-card .contacts-details .detail .info {
   display: table-cell;
   vertical-align: middle;
@@ -17593,54 +17594,58 @@ header {
   font-size: 0.7em;
   padding: 10px 0;
 }
-/* line 148, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 .profile-card .contacts-details .detail .icon {
   font-size: 24px;
   padding: 0 10px;
   font-family: icomoon, sans-serif;
 }
-/* line 161, ../scss/app.scss */
+/* line 163, ../scss/app.scss */
 .profile-card .contacts-socials {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e6e6e6;
   padding: 5px;
 }
-/* line 167, ../scss/app.scss */
+/* line 169, ../scss/app.scss */
 .profile-card .contacts-socials .social-link {
   padding: 5px;
   font-size: 32px;
   color: inherit;
 }
-/* line 172, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 .profile-card .contacts-socials .social-link .github-icon {
   color: #171515;
 }
-/* line 176, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 .profile-card .contacts-socials .social-link .linkedin-icon {
   color: #0077B5;
 }
 
-/* line 183, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 .content-card {
   padding: 10px 20px;
   display: table;
 }
-/* line 188, ../scss/app.scss */
+/* line 190, ../scss/app.scss */
 .content-card .cvsection {
   display: table-row;
 }
-/* line 191, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .content-card .cvsection .icon {
   display: table-cell;
   padding: 10px 10px;
   font-size: 16px;
 }
-/* line 197, ../scss/app.scss */
+/* line 199, ../scss/app.scss */
 .content-card .cvsection .info {
   display: table-cell;
   font-size: 14px;
   padding: 10px 10px;
 }
-/* line 206, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
+.content-card .cvsection .info .title {
+  text-transform: uppercase;
+}
+/* line 209, ../scss/app.scss */
 .content-card .cvsection .info .cventry {
   border-top: 1px solid #e6e6e6;
   padding: 5px 0 0;
