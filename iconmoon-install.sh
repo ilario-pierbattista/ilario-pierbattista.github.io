@@ -11,7 +11,6 @@ else
     cp -f style.scss ../scss/icomoon/_icomoon.scss
     cp -f variables.scss ../scss/icomoon/_variables.scss
     rm -r *
-    sed -i 's/fonts/..\/fonts/g' ../scss/icomoon/_variables.scss
 fi
 
 cd ..

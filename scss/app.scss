@@ -1,9 +1,10 @@
 @import "settings";
 @import "foundation";
-@import "font-awesome";
+@import "font-awesome/font-awesome";
 @import "icomoon/icomoon";
 @import "vars";
 @import "icons";
+@import "loader";
 
 body {
   background-color: $body-bg-color;
@@ -104,7 +105,7 @@ header {
   .profile-pic {
     $pic-size: 150px;
     $margin-bt: 30px;
-    background: url("../img/profile.jpg") no-repeat;
+    background: url("img/profile.jpg") no-repeat;
     background-size: cover;
     width: $pic-size;
     height: $pic-size;

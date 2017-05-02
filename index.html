@@ -9,117 +9,22 @@
     <meta property="og:image" content="http://ilario-pierbattista.github.io/img/profile.jpg"/>
 
     <title>Ilario Pierbattista</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
     <link rel="stylesheet" href="stylesheets/app.css"/>
+
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="bower_components/typed.js/dist/typed.min.js"></script>
-    <script src="js/app.js"></script>
+
 </head>
 <body>
-<div id="main-container" class="row main clearfix">
-    <div class="large-3 medium-12 small-12 columns card-wrapper">
-        <nav class="profile-card">
-            <div class="profile-pic"></div>
-            <h3 class="name text-center">Ilario Pierbattista</h3>
-            <h5 class="title text-center">
-                <span id="professional-title"></span>
-            </h5>
-
-            <div class="contacts-details clearfix">
-                <div class="detail">
-                    <span class="icon map-marker-icon"></span>
-                    <span class="info">Monte Urano (FM) 63813, Italy</span>
-                </div>
-
-                <div class="detail">
-                    <span class="icon phone-icon"></span>
-                    <span class="info">(+39) 3405190739</span>
-                </div>
-
-                <div class="detail">
-                    <span class="icon email-icon"></span>
-                    <span class="info">
-                        <a href="mailto:pierbattista.ilario@gmail.com" target="_blank">pierbattista.ilario@gmail.com</a>
-                    </span>
-                </div>
-            </div>
-
-            <div class="contacts-socials">
-                <a href="https://github.com/ilario-pierbattista" target="_blank" class="social-link">
-                    <span class="github-icon"></span></a>
-                <a href="https://www.linkedin.com/in/pybatt/" target="_blank" class="social-link">
-                    <span class="linkedin-icon"></span></a>
-            </div>
-
-        </nav>
+<app>
+    <div class="overlay loader">
+        <span>{</span><span>}</span>
     </div>
-
-    <div class="large-9 medium-12 small-12 columns card-wrapper">
-        <div class="content-card">
-
-            <header>
-                <div class="header-flex text-upper">Resume</div>
-                <ul id="language-selector">
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">EN</a></li>
-                </ul>
-            </header>
-
-            <hr/>
-
-            <section>
-                <div class="cvsection">
-                    <div class="icon"><span class="icomoon-profile-male"></span></div>
-                    <div class="info">
-                        <div class="title">ABOUT</div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis consectetur cum
-                        deleniti
-                        dignissimos exercitationem explicabo harum laudantium molestias neque omnis provident quasi
-                        ratione
-                        rem
-                        soluta,
-                        tenetur vel vitae, voluptate!
-                    </div>
-                </div>
-
-                <div class="cvsection">
-                    <div class="icon"><span class="icomoon-book-open"></span></div>
-                    <div class="info">
-                        <div class="title">EDUCATION</div>
-                        <div class="cventry">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae cupiditate
-                            libero
-                            magnam
-                            maiores tempore, ullam veritatis voluptatum? Cupiditate dolores eligendi eum incidunt
-                            inventore
-                            libero
-                            perferendis repellendus, tempora totam vero!
-                        </div>
-                        <div class="cventry">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis consectetur corporis
-                            laboriosam molestiae neque nihil, optio quos sapiente tenetur? Dolores impedit inventore
-                            libero
-                            modi nihil perspiciatis, repudiandae temporibus velit!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cvsection">
-                    <div class="icon"><span class="icomoon-briefcase"></span></div>
-                    <div class="info">
-                        <div class="title">WORK</div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, doloremque ea eveniet explicabo
-                        ipsum
-                        laudantium minus officia porro quae quo quod reiciendis rem tempora tempore temporibus tenetur
-                        voluptas
-                        voluptatibus.
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
+</app>
+<script src="dist/bundle.js"></script>
 </body>
 </html>
