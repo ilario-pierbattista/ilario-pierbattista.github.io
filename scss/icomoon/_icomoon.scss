@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icomoon-font-path}/icomoon.eot?wsaigx');
-  src:  url('#{$icomoon-font-path}/icomoon.eot?wsaigx#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/icomoon.ttf?wsaigx') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?wsaigx') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?wsaigx#icomoon') format('svg');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?gst4k5');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?gst4k5#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?gst4k5') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?gst4k5') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?gst4k5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,6 +29,11 @@
 .icomoon-phone {
   &:before {
     content: $icomoon-phone;
+  }
+}
+.icomoon-clipboard {
+  &:before {
+    content: $icomoon-clipboard;
   }
 }
 .icomoon-book-open {
@@ -69,6 +74,11 @@
 .icomoon-lightbulb {
   &:before {
     content: $icomoon-lightbulb;
+  }
+}
+.icomoon-tools-2 {
+  &:before {
+    content: $icomoon-tools-2;
   }
 }
 .icomoon-profile-male {

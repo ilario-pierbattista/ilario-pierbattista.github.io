@@ -15,6 +15,10 @@
   content: $icomoon-phone;
 }
 
+.cv-icon:before{
+  content: $icomoon-clipboard;
+}
+
 // Social
 .github-icon {
   @extend .fa, .fa-github;

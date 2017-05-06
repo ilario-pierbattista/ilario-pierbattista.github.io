@@ -8719,8 +8719,8 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?wsaigx");
-  src: url("../fonts/icomoon.eot?wsaigx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wsaigx") format("truetype"), url("../fonts/icomoon.woff?wsaigx") format("woff"), url("../fonts/icomoon.svg?wsaigx#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?gst4k5");
+  src: url("../fonts/icomoon.eot?gst4k5#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?gst4k5") format("truetype"), url("../fonts/icomoon.woff?gst4k5") format("woff"), url("../fonts/icomoon.svg?gst4k5#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8739,6 +8739,9 @@ th.hide-for-touch {
 
 .icomoon-phone:before {
   content: ""; }
+
+.icomoon-clipboard:before {
+  content: ""; }
 
 .icomoon-book-open:before {
   content: ""; }
@@ -8763,6 +8766,9 @@ th.hide-for-touch {
 
 .icomoon-lightbulb:before {
   content: ""; }
+
+.icomoon-tools-2:before {
+  content: ""; }
 
 .icomoon-profile-male:before {
   content: ""; }
@@ -11101,8 +11107,8 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?wsaigx");
-  src: url("../fonts/icomoon.eot?wsaigx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wsaigx") format("truetype"), url("../fonts/icomoon.woff?wsaigx") format("woff"), url("../fonts/icomoon.svg?wsaigx#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?gst4k5");
+  src: url("../fonts/icomoon.eot?gst4k5#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?gst4k5") format("truetype"), url("../fonts/icomoon.woff?gst4k5") format("woff"), url("../fonts/icomoon.svg?gst4k5#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11121,6 +11127,9 @@ th.hide-for-touch {
 
 .icomoon-phone:before {
   content: ""; }
+
+.icomoon-clipboard:before {
+  content: ""; }
 
 .icomoon-book-open:before {
   content: ""; }
@@ -11146,6 +11155,9 @@ th.hide-for-touch {
 .icomoon-lightbulb:before {
   content: ""; }
 
+.icomoon-tools-2:before {
+  content: ""; }
+
 .icomoon-profile-male:before {
   content: ""; }
 
@@ -11160,6 +11172,9 @@ th.hide-for-touch {
 
 .phone-icon:before {
   content: ""; }
+
+.cv-icon:before {
+  content: ""; }
 
 .overlay {
   position: fixed;
@@ -11280,7 +11295,7 @@ header {
 
 @media screen {
   .profile-card .profile-pic {
-    background: url("../img/profile.jpg") no-repeat;
+    background: url("../static/img/profile.jpg") no-repeat;
     background-size: cover;
     width: 150px;
     height: 150px;
