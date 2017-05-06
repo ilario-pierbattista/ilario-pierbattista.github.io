@@ -8719,8 +8719,8 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?gst4k5");
-  src: url("../fonts/icomoon.eot?gst4k5#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?gst4k5") format("truetype"), url("../fonts/icomoon.woff?gst4k5") format("woff"), url("../fonts/icomoon.svg?gst4k5#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?ohmrkx");
+  src: url("../fonts/icomoon.eot?ohmrkx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ohmrkx") format("truetype"), url("../fonts/icomoon.woff?ohmrkx") format("woff"), url("../fonts/icomoon.svg?ohmrkx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -8775,6 +8775,9 @@ th.hide-for-touch {
 
 .icomoon-genius:before {
   content: ""; }
+
+.icomoon-cloud-download:before {
+  content: ""; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -11107,8 +11110,8 @@ th.hide-for-touch {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?gst4k5");
-  src: url("../fonts/icomoon.eot?gst4k5#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?gst4k5") format("truetype"), url("../fonts/icomoon.woff?gst4k5") format("woff"), url("../fonts/icomoon.svg?gst4k5#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?ohmrkx");
+  src: url("../fonts/icomoon.eot?ohmrkx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ohmrkx") format("truetype"), url("../fonts/icomoon.woff?ohmrkx") format("woff"), url("../fonts/icomoon.svg?ohmrkx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11163,6 +11166,9 @@ th.hide-for-touch {
 
 .icomoon-genius:before {
   content: ""; }
+
+.icomoon-cloud-download:before {
+  content: ""; }
 
 .map-marker-icon:before {
   content: ""; }
@@ -11227,6 +11233,9 @@ a {
     color: inherit; }
   a:hover {
     border-bottom: 1px solid #333333; }
+  @media print {
+    a[href] {
+      text-transform: none; } }
 
 .main {
   padding: 5px;
@@ -11380,31 +11389,36 @@ header {
           .content-card .cvsection .info .cventry .cventry-info .institution-info {
             display: table-row;
             width: 100%; }
-          .content-card .cvsection .info .cventry .cventry-info .institution {
-            display: table-cell;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: #333333; }
-          .content-card .cvsection .info .cventry .cventry-info .location {
-            display: table-cell;
-            text-align: right;
-            font-style: italic;
-            color: #707070; }
+            .content-card .cvsection .info .cventry .cventry-info .institution-info .institution {
+              display: table-cell;
+              text-transform: uppercase;
+              font-weight: 700;
+              color: #333333; }
+            .content-card .cvsection .info .cventry .cventry-info .institution-info .location {
+              display: table-cell;
+              text-align: right;
+              font-style: italic;
+              color: #707070; }
           .content-card .cvsection .info .cventry .cventry-info .position-info {
             display: table-row;
             width: 100%; }
-          .content-card .cvsection .info .cventry .cventry-info .position {
-            display: table-cell;
-            text-transform: uppercase;
-            font-size: 12px;
-            color: #707070;
-            padding-bottom: 10px; }
-          .content-card .cvsection .info .cventry .cventry-info .dates {
-            display: table-cell;
-            text-align: right;
-            font-style: italic;
-            font-size: 12px;
-            color: #707070; }
+            .content-card .cvsection .info .cventry .cventry-info .position-info .position {
+              display: table-cell;
+              text-transform: uppercase;
+              font-size: 12px;
+              color: #707070;
+              padding-bottom: 10px; }
+              .content-card .cvsection .info .cventry .cventry-info .position-info .position.active:after {
+                content: '\1F311';
+                font-size: 10px;
+                padding-left: 5px;
+                color: #689d6a; }
+            .content-card .cvsection .info .cventry .cventry-info .position-info .dates {
+              display: table-cell;
+              text-align: right;
+              font-style: italic;
+              font-size: 12px;
+              color: #707070; }
         .content-card .cvsection .info .cventry .cventry-details {
           padding: 0 10px;
           font-size: 14px; }
@@ -11419,9 +11433,14 @@ header {
               font-size: 12px;
               text-transform: uppercase; }
           .content-card .cvsection .info .cventry .cventry-details .bulletpoints {
-            padding: 5px 0; }
-            .content-card .cvsection .info .cventry .cventry-details .bulletpoints li {
-              font-size: 14px; }
+            padding: 5px 0;
+            list-style-type: none;
+            margin-left: 0;
+            font-size: 14px; }
+            .content-card .cvsection .info .cventry .cventry-details .bulletpoints li:before {
+              content: '\2022';
+              padding-right: 5px;
+              color: #707070; }
           .content-card .cvsection .info .cventry .cventry-details .structured-details {
             display: table;
             width: 100%; }

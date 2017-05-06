@@ -9,6 +9,23 @@ $gray: #707070;
 $dark: #333333;
 $darkest: #222222;
 
+// Gruvbox light mode ligtht colors
+$gruvbox-lightmode-red-light: #cc241d;
+$gruvbox-lightmode-orange-light: #d55d0e;
+$gruvbox-lightmode-yellow-light: #d79921;
+$gruvbox-lightmode-green-light: #98971a;
+$gruvbox-lightmode-aqua-light: #689d6a;
+$gruvbox-lightmode-blue-light: #458588;
+$gruvbox-lightmode-purple-light: #b16286;
+// Gruvbox light mode dark colors
+$gruvbox-lightmode-red-dark: #9d0006;
+$gruvbox-lightmode-orange-dark: #af3a03;
+$gruvbox-lightmode-yellow-dark: #b57614;
+$gruvbox-lightmode-green-dark: #79740e;
+$gruvbox-lightmode-aqua-dark: #427b58;
+$gruvbox-lightmode-blue-dark: #076678;
+$gruvbox-lightmode-purple-dark: #8f3f71;
+
 // Color assignment
 $body-bg-color: $brightest;
 
@@ -33,6 +50,8 @@ $cventry-location-color: $gray;
 $cventry-dates-color: $gray;
 $cventry-table-border: $dark;
 $cvparagraph-title-color: $gray;
+$cvbullet-color: $gray;
+$cvposition-active-marker-color: $gruvbox-lightmode-aqua-light;
 
 // Icons color
 $github-light-mode: #171515;
