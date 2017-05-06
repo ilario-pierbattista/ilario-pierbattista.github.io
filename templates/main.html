@@ -4,7 +4,7 @@
             <div class="profile-pic"></div>
             <h3 class="name text-center">Ilario Pierbattista</h3>
             <h5 class="title text-center">
-                <span id="professional-title"></span>
+                <span id="professional-title">{{ 'profile_title' | translate }}</span>
             </h5>
 
             <div class="contacts-details clearfix">
@@ -29,7 +29,7 @@
             <div class="contacts-socials">
                 <a href="https://github.com/ilario-pierbattista" target="_blank" class="social-link">
                     <span class="github-icon"></span></a>
-                <a href="https://www.linkedin.com/in/pybatt/" target="_blank" class="social-link">
+                <a [attr.href]="'linkedin' | translate" target="_blank" class="social-link">
                     <span class="linkedin-icon"></span></a>
             </div>
 
@@ -41,18 +41,23 @@
 
             <header>
                 <div class="header-flex text-upper">{{ 'background' | translate }}</div>
+                <!-- Selettore della lingua @TODO completare la traduzione dei contenuti
                 <ul id="language-selector">
                     <li *ngFor="let lang of supportedLanguages; let i=index">
-                        <a href="#?lang={{ lang.value }}" (click)="selectLang(lang.value)" [class.active]="isCurrentLang(lang.value)">
+                        <a href="#?lang={{ lang.value }}" (click)="selectLang(lang.value)"
+                           [class.active]="isCurrentLang(lang.value)"
+                           [class.with-separator]="i < supportedLanguages.length - 1">
                             {{lang.iso_code}}
-                        </a>{{i == supportedLanguages.length - 1 ? '' : ' | '}}
+                        </a>
                     </li>
                 </ul>
+                -->
             </header>
 
             <hr/>
 
             <section>
+                <!-- Presentazione -->
                 <div class="cvsection">
                     <div class="icon"><span class="icomoon-profile-male"></span></div>
                     <div class="info">
@@ -67,28 +72,110 @@
                     </div>
                 </div>
 
+                <!-- Istruzione -->
                 <div class="cvsection">
                     <div class="icon"><span class="icomoon-book-open"></span></div>
                     <div class="info">
                         <div class="title">{{ 'education' | translate }}</div>
-                        <div class="cventry">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae cupiditate
-                            libero
-                            magnam
-                            maiores tempore, ullam veritatis voluptatum? Cupiditate dolores eligendi eum incidunt
-                            inventore
-                            libero
-                            perferendis repellendus, tempora totam vero!
+
+                        <!-- UNIVPM magistrale -->
+                        <div class="cventry cventry-new-context">
+                            <div class="cventry-info">
+                                <div class="institution-info">
+                                    <div class="institution">{{ 'univpm_name' | translate }}</div>
+                                    <div class="location">{{ 'univpm_location' | translate }}</div>
+                                </div>
+
+                                <div class="position-info">
+                                    <div class="position">Laurea Magistrale in Ingegneria Informatica e dell'Automazione
+                                    </div>
+                                    <div class="dates">Settembre 2015 - Presente</div>
+                                </div>
+                            </div>
+
+                            <div class="cventry-details">
+                                <p class="cvparagraph">
+                                    <span class="cvparagraph-title">Curriculum accademico: </span>
+                                    L'offerta formativa del corso di laurea in <span
+                                        class="emph">Ingegneria Informatica e dell'Automazione</span> presso l'<span
+                                        class="emph">Università Politecnica delle Marche</span> è caratterizzata (sia
+                                    alla magistrale che alla triennale) da un ampia rosa di esami a scelta
+                                    specializzanti nell'uno o nell'altro ramo.
+                                    Ho modellato il mio curriculum accademico inserendo il maggior numero possibile di
+                                    insegnamenti specializzanti nel ramo <span class="textit">informatico</span>.
+                                </p>
+
+                                <ul class="bulletpoints">
+                                    <li>Metodologie di progettazione <span class="textit">Agile</span></li>
+                                    <li>Tecniche avanzate di <span class="textit">ingegneria del software</span></li>
+                                    <li>Progettazione, sviluppo e deployment di <span class="textit">sistemi software distribuiti</span>
+                                        con particolare attenzione ai servizi RESTful
+                                    </li>
+                                    <li>Conoscenza teorica e pratica dei paradigmi di <span class="textit">programmazione dichiarativa,
+                                        funzionale, relazionale, vincolata, logica</span>
+                                    </li>
+                                    <li>Conoscenza dei principali problemi di <span
+                                            class="textit">ricerca operativa</span> e delle relative metodologie
+                                        risolutive
+                                    </li>
+                                </ul>
+
+                            </div>
                         </div>
+
+                        <!-- UNIVPM triennale -->
                         <div class="cventry">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis consectetur corporis
-                            laboriosam molestiae neque nihil, optio quos sapiente tenetur? Dolores impedit inventore
-                            libero
-                            modi nihil perspiciatis, repudiandae temporibus velit!
+                            <div class="cventry-info">
+                                <div class="position-info">
+                                    <div class="position">{{ 'univpm_bsc_title' | translate }}</div>
+                                    <div class="dates">{{ 'univpm_bsc_dates' | translate }}</div>
+                                </div>
+                            </div>
+
+                            <div class="cventry-details">
+                                <p class="cvparagraph">
+                                    <span class="cvparagraph-title">Curriculum Accademico:</span>
+                                    Il corso di laurea triennale in <span class="emph">Ingegneria Informatica e dell'Automazione</span>
+                                    fornisce una preparazione ingegneristica di base, alla quale si aggiungono
+                                    insegnamenti affini di <span class="emph">ingegneria elettronica e delle telecomunicazioni</span>
+                                    ed insegnamenti caratterizzanti.
+                                    Ho modellato il mio curriculum accademico in modo da specializzarmi in <span
+                                        class="textit">ingegneria informatica</span>.
+                                </p>
+
+                                <ul class="bulletpoints">
+                                    <li>Tecniche di <span class="textit">ingegneria del software</span></li>
+                                    <li>Progettazione, realizzazione e mantenimento di <span
+                                            class="textit">basi di dati</span></li>
+                                    <li>Progettazione e realizzazione di <span class="textit">applicazioni web</span>
+                                        mediante l’utilizzo di moderni <span class="textit">framework MVC</span></li>
+                                    <li>Granitica conoscenza teorica e pratica dei paradigmi di <span class="textit">programmazione procedurale</span>
+                                        e di <span class="textit">programmazione ad oggetti</span></li>
+                                </ul>
+
+                                <div class="structured-details">
+
+                                    <div class="detail">
+                                        <div class="detail-key">Tesi</div>
+                                        <div class="detail-value">
+                                            <span class="thesis-title">Implementazione di un algoritmo di riconoscimento
+                                            della persona attraverso frame di profondità</span> - Relatore: <span
+                                                class="emph">Prof. Ennio Gambi</span> - Correlatore: <span class="emph">Ing. Enea Cippitelli</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="detail">
+                                        <div class="detail-key">Punteggio Finale</div>
+                                        <div class="detail-value">109/110</div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lavoro -->
                 <div class="cvsection">
                     <div class="icon"><span class="icomoon-briefcase"></span></div>
                     <div class="info">

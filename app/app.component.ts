@@ -7,31 +7,25 @@ import {TranslateService} from './translate/translate.service';
 })
 
 export class AppComponent implements OnInit {
-    public translatedText: string;
     public supportedLanguages: any[];
 
-    constructor(private _translate: TranslateService) {
+    constructor(public translateService: TranslateService) {
     }
 
     ngOnInit() {
         this.supportedLanguages = [
-            {display: 'Italiano', iso_code:'IT', value: 'it'},
-            {display: 'English', iso_code:'EN', value: 'en'}
+            {display: 'Italiano', iso_code: 'IT', value: 'it'},
+            {display: 'English', iso_code: 'EN', value: 'en'}
         ];
 
         this.selectLang('it');
     }
 
     isCurrentLang(lang: string) {
-        return lang === this._translate.currentLang;
+        return lang === this.translateService.currentLang;
     }
 
     selectLang(lang: string) {
-        this._translate.use(lang);
-        this.refreshText();
-    }
-
-    refreshText() {
-        this.translatedText = this._translate.instant('hello world');
+        this.translateService.use(lang);
     }
 }

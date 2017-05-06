@@ -1,9 +1,10 @@
-import {Injectable, Inject} from '@angular/core';
-import {TRANSLATIONS} from './translations'; // import our opaque token
+import {Injectable, Inject, EventEmitter} from '@angular/core';
+import {TRANSLATIONS} from './translations';
 
 @Injectable()
 export class TranslateService {
     private _currentLang: string;
+    public onLangChanged: EventEmitter<string> = new EventEmitter<string>();
 
     public get currentLang() {
         return this._currentLang;
@@ -14,9 +15,10 @@ export class TranslateService {
 
     public use(lang: string): void {
         this._currentLang = lang;
+        this.onLangChanged.emit(lang);
     }
 
-    private translate(key: string): string {
+    public translate(key: string): string|string[] {
         // private perform translation
         let translation = key;
 
