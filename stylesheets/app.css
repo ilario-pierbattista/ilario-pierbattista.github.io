@@ -11436,14 +11436,23 @@ header {
             padding: 5px 0;
             list-style-type: none;
             margin-left: 0;
+            margin-bottom: 0;
             font-size: 14px; }
+            .content-card .cvsection .info .cventry .cventry-details .bulletpoints li.bulletpoints-title {
+              text-transform: uppercase;
+              font-size: 12px;
+              color: #707070; }
+              .content-card .cvsection .info .cventry .cventry-details .bulletpoints li.bulletpoints-title:before {
+                padding-right: 0;
+                content: none; }
             .content-card .cvsection .info .cventry .cventry-details .bulletpoints li:before {
               content: '\2022';
               padding-right: 5px;
               color: #707070; }
           .content-card .cvsection .info .cventry .cventry-details .structured-details {
             display: table;
-            width: 100%; }
+            width: 100%;
+            padding-top: 15px; }
             .content-card .cvsection .info .cventry .cventry-details .structured-details .detail {
               display: table-row;
               width: 100%; }
@@ -11465,3 +11474,17 @@ header {
                     content: open-quote; }
                   .content-card .cvsection .info .cventry .cventry-details .structured-details .detail .detail-value .thesis-title:after {
                     content: close-quote; }
+        .content-card .cvsection .info .cventry .cventry-label {
+          outline: 1px solid #e0e0e0;
+          color: #707070;
+          font-size: 10px;
+          padding: 0 2px;
+          margin: 0 8px;
+          vertical-align: text-bottom;
+          font-weight: normal; }
+          .content-card .cvsection .info .cventry .cventry-label.progetto-universitario:after {
+            content: 'progetto universitario'; }
+          .content-card .cvsection .info .cventry .cventry-label.hackathon:after {
+            content: 'hackathon'; }
+          .content-card .cvsection .info .cventry .cventry-label.progetto:after {
+            content: 'progetto'; }
