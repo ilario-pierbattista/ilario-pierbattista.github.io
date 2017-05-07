@@ -11,6 +11,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+@media print {
+  @page {
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
 }
@@ -25,7 +30,7 @@ hr {
 a {
   text-decoration: none;
   background-color: transparent;
-  border-bottom: 1px solid rgba($text-color, 0);
+  border-bottom: 1px solid rgba($text-color, 0.1);
   transition: border 500ms ease;
 
   &:hover, &:link, &:active, &:visited {
@@ -198,6 +203,7 @@ header {
     .social-link {
       padding: 5px;
       color: inherit;
+
       @media screen {
         font-size: 32px;
       }
@@ -220,6 +226,9 @@ header {
   @extend .card;
   padding: 10px 20px;
   display: table;
+  @media print {
+    border: 0;
+  }
 
   .cvsection {
     display: table-row;
@@ -370,19 +379,19 @@ header {
                 display: table-cell;
                 width: 75%;
                 padding: 2px 10px;
-
-                .thesis-title {
-                  font-style: italic;
-
-                  &:before {
-                    content: open-quote;
-                  }
-                  &:after {
-                    content: close-quote;
-                  }
-                }
               }
             }
+          }
+        }
+
+        .reference-title {
+          font-style: italic;
+
+          &:before {
+            content: open-quote;
+          }
+          &:after {
+            content: close-quote;
           }
         }
 
