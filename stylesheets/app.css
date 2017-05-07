@@ -4994,7 +4994,7 @@ meta.foundation-mq-topbar {
 .text-right {
   text-align: right !important; }
 
-.text-center, .profile-card .contacts-details .detail .icon, .profile-card .contacts-socials {
+.text-center, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon, .profile-card-wrapper .profile-card .profile-data .contacts-socials {
   text-align: center !important; }
 
 .text-justify {
@@ -11247,7 +11247,7 @@ a {
 .card-wrapper {
   padding: 5px; }
 
-.card, .profile-card, .content-card {
+.card, .profile-card-wrapper .profile-card, .content-card {
   padding: 5px;
   background-color: #FFFFFF;
   border: 1px solid #e6e6e6;
@@ -11305,8 +11305,21 @@ header {
 #language-selector .active {
   color: #707070; }
 
+@media (min-width: 40em) and (max-width: 64em) {
+  .profile-card-wrapper {
+    display: table; } }
+
+@media (min-width: 40em) and (max-width: 64em) {
+  .profile-card-wrapper .profile-card {
+    display: table-row; } }
+
+@media (min-width: 40em) and (max-width: 64em) {
+  .profile-card-wrapper .profile-card .profile-header {
+    display: table-cell;
+    vertical-align: bottom; } }
+
 @media screen {
-  .profile-card .profile-pic {
+  .profile-card-wrapper .profile-card .profile-header .profile-pic {
     background: url("../static/img/profile.jpg") no-repeat;
     background-size: cover;
     width: 150px;
@@ -11316,54 +11329,63 @@ header {
     display: block; } }
 
 @media print {
-  .profile-card .profile-pic {
+  .profile-card-wrapper .profile-card .profile-header .profile-pic {
     display: none; } }
 
-.profile-card .name {
+.profile-card-wrapper .profile-card .profile-header .name {
   font-size: 24px;
   font-weight: 700;
   margin: 20px auto; }
 
-.profile-card .title {
+.profile-card-wrapper .profile-card .profile-header .title {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.1;
   margin: 15px auto;
   color: #707070; }
 
-.profile-card .contacts-details {
+@media (min-width: 40em) and (max-width: 64em) {
+  .profile-card-wrapper .profile-card .profile-data {
+    display: table-cell;
+    border-left: 1px solid #e6e6e6;
+    vertical-align: bottom; } }
+
+.profile-card-wrapper .profile-card .profile-data .contacts-details {
   border-top: 1px solid #e6e6e6;
   padding: 5px;
   display: table;
   width: 100%; }
-  .profile-card .contacts-details .detail {
+  @media (min-width: 40em) and (max-width: 64em) {
+    .profile-card-wrapper .profile-card .profile-data .contacts-details {
+      border-top: 0; } }
+  .profile-card-wrapper .profile-card .profile-data .contacts-details .detail {
     display: table-row; }
-    .profile-card .contacts-details .detail ._cell, .profile-card .contacts-details .detail .icon, .profile-card .contacts-details .detail .info {
+    .profile-card-wrapper .profile-card .profile-data .contacts-details .detail ._cell, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .info {
       display: table-cell;
       vertical-align: middle;
       color: #333333;
       font-size: 0.7em;
       padding: 10px 0; }
-    .profile-card .contacts-details .detail .icon {
+    .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon {
       font-size: 24px;
       padding: 0 10px;
       font-family: icomoon, sans-serif; }
 
-.profile-card .contacts-socials {
+.profile-card-wrapper .profile-card .profile-data .contacts-socials {
   border-top: 1px solid #e6e6e6;
   padding: 5px; }
-  .profile-card .contacts-socials .social-link {
+  .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link {
     padding: 5px;
     color: inherit; }
     @media screen {
-      .profile-card .contacts-socials .social-link {
+      .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link {
         font-size: 32px; } }
     @media print {
-      .profile-card .contacts-socials .social-link {
+      .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link {
         font-size: 12px; } }
-    .profile-card .contacts-socials .social-link .github-icon {
+    .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link .github-icon {
       color: #171515; }
-    .profile-card .contacts-socials .social-link .linkedin-icon {
+    .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link .linkedin-icon {
       color: #0077B5; }
 
 .content-card {

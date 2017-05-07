@@ -1,43 +1,47 @@
 <div id="main-container" class="row main clearfix">
-    <div class="large-3 medium-12 small-12 columns card-wrapper">
+    <div class="large-3 medium-12 small-12 columns card-wrapper profile-card-wrapper">
         <nav class="profile-card">
-            <div class="profile-pic"></div>
-            <h3 class="name text-center">Ilario Pierbattista</h3>
-            <h5 class="title text-center">
-                <span id="professional-title">{{ 'profile_title' | translate }}</span>
-            </h5>
-
-            <div class="contacts-details clearfix">
-                <div class="detail">
-                    <span class="icon map-marker-icon"></span>
-                    <span class="info">{{ 'location' | translate }}</span>
-                </div>
-
-                <div class="detail">
-                    <span class="icon phone-icon"></span>
-                    <span class="info">(+39) 340-5190739</span>
-                </div>
-
-                <div class="detail">
-                    <span class="icon email-icon"></span>
-                    <span class="info">
-                        <a href="mailto:pierbattista.ilario@gmail.com" target="_blank">pierbattista.ilario@gmail.com</a>
-                    </span>
-                </div>
-
-                <div class="detail">
-                    <span class="icon cv-icon"></span>
-                    <span class="info">
-                        <a href="static/doc/cv_Ilario_Pierbattista_IT.pdf" target="_blank">Curriculum Vitae</a>
-                    </span>
-                </div>
+            <div class="profile-header">
+                <div class="profile-pic"></div>
+                <h3 class="name text-center">Ilario Pierbattista</h3>
+                <h5 class="title text-center">
+                    <span id="professional-title">{{ 'profile_title' | translate }}</span>
+                </h5>
             </div>
 
-            <div class="contacts-socials">
-                <a href="https://github.com/ilario-pierbattista" target="_blank" class="social-link">
-                    <span class="github-icon"></span></a>
-                <a [attr.href]="'linkedin' | translate" target="_blank" class="social-link">
-                    <span class="linkedin-icon"></span></a>
+            <div class="profile-data">
+                <div class="contacts-details clearfix">
+                    <div class="detail">
+                        <span class="icon map-marker-icon"></span>
+                        <span class="info">{{ 'location' | translate }}</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="icon phone-icon"></span>
+                        <span class="info">(+39) 340-5190739</span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="icon email-icon"></span>
+                        <span class="info">
+                        <a href="mailto:pierbattista.ilario@gmail.com" target="_blank">pierbattista.ilario@gmail.com</a>
+                    </span>
+                    </div>
+
+                    <div class="detail">
+                        <span class="icon cv-icon"></span>
+                        <span class="info">
+                        <a href="static/doc/cv_Ilario_Pierbattista_IT.pdf" target="_blank">Curriculum Vitae</a>
+                    </span>
+                    </div>
+                </div>
+
+                <div class="contacts-socials">
+                    <a href="https://github.com/ilario-pierbattista" target="_blank" class="social-link">
+                        <span class="github-icon"></span></a>
+                    <a [attr.href]="'linkedin' | translate" target="_blank" class="social-link">
+                        <span class="linkedin-icon"></span></a>
+                </div>
             </div>
 
         </nav>

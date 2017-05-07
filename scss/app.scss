@@ -130,96 +130,127 @@ header {
   }
 }
 
-.profile-card {
-  @extend .card;
+.profile-card-wrapper {
 
-  .profile-pic {
-    @media screen {
-      $pic-size: 150px;
-      $margin-bt: 30px;
-      background: url("../static/img/profile.jpg") no-repeat;
-      background-size: cover;
-      width: $pic-size;
-      height: $pic-size;
-      border-radius: 100%;
-      margin: $margin-bt auto;
-      display: block;
-    }
-    @media print {
-      display: none;
-    }
-  }
-
-  .name {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 20px auto;
-  }
-
-  .title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.1;
-    margin: 15px auto;
-    color: $profile-title-color;
-  }
-
-  .contacts-details {
-    border-top: 1px solid $card-hr-color;
-    padding: 5px;
+  @media (min-width: $small-breakpoint) and (max-width: $medium-breakpoint) {
     display: table;
-    width: 100%;
+  }
 
-    .detail {
+  .profile-card {
+    @extend .card;
+
+    @media (min-width: $small-breakpoint) and (max-width: $medium-breakpoint) {
       display: table-row;
+    }
 
-      ._cell {
+    .profile-header {
+      @media (min-width: $small-breakpoint) and (max-width: $medium-breakpoint) {
         display: table-cell;
-        vertical-align: middle;
-        color: $detail-text-color;
-        font-size: 0.7em;
-        padding: 10px 0;
+        vertical-align: bottom;
       }
 
-      .icon {
-        @extend ._cell, .text-center;
+      .profile-pic {
+        @media screen {
+          $pic-size: 150px;
+          $margin-bt: 30px;
+          background: url("../static/img/profile.jpg") no-repeat;
+          background-size: cover;
+          width: $pic-size;
+          height: $pic-size;
+          border-radius: 100%;
+          margin: $margin-bt auto;
+          display: block;
+        }
+        @media print {
+          display: none;
+        }
+      }
+
+      .name {
         font-size: 24px;
-        padding: 0 10px;
-        font-family: icomoon, sans-serif;
+        font-weight: 700;
+        margin: 20px auto;
       }
 
-      .info {
-        @extend ._cell;
-      }
-    }
-  }
-
-  .contacts-socials {
-    @extend .text-center;
-
-    border-top: 1px solid $card-hr-color;
-    padding: 5px;
-
-    .social-link {
-      padding: 5px;
-      color: inherit;
-
-      @media screen {
-        font-size: 32px;
-      }
-      @media print {
-        font-size: 12px;
-      }
-
-      .github-icon {
-        color: $github-light-mode;
-      }
-
-      .linkedin-icon {
-        color: $linkedin-light-mode;
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.1;
+        margin: 15px auto;
+        color: $profile-title-color;
       }
     }
+
+    .profile-data {
+      @media (min-width: $small-breakpoint) and (max-width: $medium-breakpoint) {
+        display: table-cell;
+        border-left: 1px solid $card-hr-color;
+        vertical-align: bottom;
+      }
+
+      .contacts-details {
+        @media (min-width: $small-breakpoint) and (max-width: $medium-breakpoint) {
+          border-top: 0;
+        }
+        border-top: 1px solid $card-hr-color;
+        padding: 5px;
+        display: table;
+        width: 100%;
+
+        .detail {
+          display: table-row;
+
+          ._cell {
+            display: table-cell;
+            vertical-align: middle;
+            color: $detail-text-color;
+            font-size: 0.7em;
+            padding: 10px 0;
+          }
+
+          .icon {
+            @extend ._cell, .text-center;
+            font-size: 24px;
+            padding: 0 10px;
+            font-family: icomoon, sans-serif;
+          }
+
+          .info {
+            @extend ._cell;
+          }
+        }
+      }
+
+      .contacts-socials {
+        @extend .text-center;
+
+        border-top: 1px solid $card-hr-color;
+        padding: 5px;
+
+        .social-link {
+          padding: 5px;
+          color: inherit;
+
+          @media screen {
+            font-size: 32px;
+          }
+          @media print {
+            font-size: 12px;
+          }
+
+          .github-icon {
+            color: $github-light-mode;
+          }
+
+          .linkedin-icon {
+            color: $linkedin-light-mode;
+          }
+        }
+      }
+    }
+
   }
+
 }
 
 .content-card {
