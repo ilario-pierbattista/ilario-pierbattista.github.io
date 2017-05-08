@@ -11243,15 +11243,24 @@ a {
 .main {
   padding: 5px;
   max-width: 100%; }
+  @media (max-width: 40em) {
+    .main {
+      padding: 2px; } }
 
 .card-wrapper {
   padding: 5px; }
+  @media (max-width: 40em) {
+    .card-wrapper {
+      padding: 2px; } }
 
 .card, .profile-card-wrapper .profile-card, .content-card {
   padding: 5px;
   background-color: #FFFFFF;
   border: 1px solid #e6e6e6;
   border-radius: 2px; }
+  @media (max-width: 40em) {
+    .card, .profile-card-wrapper .profile-card, .content-card {
+      padding: 2px; } }
 
 .text-upper {
   text-transform: uppercase; }
@@ -11394,16 +11403,27 @@ header {
   @media print {
     .content-card {
       border: 0; } }
+  @media (max-width: 40em) {
+    .content-card {
+      padding: 4px 8px; } }
   .content-card .cvsection {
     display: table-row; }
+    .content-card .cvsection ._cell, .content-card .cvsection .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .content-card .cvsection .icon, .content-card .cvsection .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .info, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .content-card .cvsection .info, .content-card .cvsection .icon, .content-card .cvsection .info {
+      display: table-cell;
+      padding: 10px; }
+      @media (max-width: 40em) {
+        .content-card .cvsection ._cell, .content-card .cvsection .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .content-card .cvsection .icon, .content-card .cvsection .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .info, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .content-card .cvsection .info, .content-card .cvsection .icon, .content-card .cvsection .info {
+          padding: 5px; } }
     .content-card .cvsection .icon {
-      display: table-cell;
-      padding: 10px 10px;
       font-size: 16px; }
+      @media (max-width: 40em) {
+        .content-card .cvsection .icon {
+          display: none; } }
     .content-card .cvsection .info {
-      display: table-cell;
-      font-size: 14px;
-      padding: 10px 10px; }
+      font-size: 14px; }
+      @media (max-width: 40em) {
+        .content-card .cvsection .info {
+          display: block; } }
       .content-card .cvsection .info .title {
         text-transform: uppercase; }
       .content-card .cvsection .info .cventry-new-context {
@@ -11507,9 +11527,13 @@ header {
           color: #707070;
           font-size: 10px;
           padding: 0 2px;
-          margin: 0 8px;
+          margin: 0 0 8px 0;
           vertical-align: text-bottom;
-          font-weight: normal; }
+          font-weight: normal;
+          display: inline-block; }
+          @media (max-width: 40em) {
+            .content-card .cvsection .info .cventry .cventry-label {
+              margin: 0; } }
           .content-card .cvsection .info .cventry .cventry-label.progetto-universitario:after {
             content: 'progetto universitario'; }
           .content-card .cvsection .info .cventry .cventry-label.hackathon:after {

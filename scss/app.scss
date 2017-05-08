@@ -51,10 +51,18 @@ a {
 .main {
   padding: 5px;
   max-width: 100%;
+
+  @media (max-width: $small-breakpoint) {
+    padding: 2px;
+  }
 }
 
 .card-wrapper {
   padding: 5px;
+
+  @media (max-width: $small-breakpoint) {
+    padding: 2px;
+  }
 }
 
 .card {
@@ -62,6 +70,10 @@ a {
   background-color: $card-bg-color;
   border: 1px solid $card-border-color;
   border-radius: 2px;
+
+  @media (max-width: $small-breakpoint) {
+    padding: 2px;
+  }
 }
 
 .text-upper {
@@ -260,20 +272,35 @@ header {
   @media print {
     border: 0;
   }
+  @media (max-width: $small-breakpoint) {
+    padding: 4px 8px;
+  }
 
   .cvsection {
     display: table-row;
 
-    .icon {
+    ._cell {
       display: table-cell;
-      padding: 10px 10px;
+      padding: 10px;
+      @media (max-width: $small-breakpoint) {
+        padding: 5px;
+      }
+    }
+
+    .icon {
+      @extend ._cell;
       font-size: 16px;
+      @media (max-width: $small-breakpoint) {
+        display: none;
+      }
     }
 
     .info {
-      display: table-cell;
+      @extend ._cell;
       font-size: 14px;
-      padding: 10px 10px;
+      @media (max-width: $small-breakpoint) {
+        display: block;
+      }
 
       .title {
         @extend .subheader;
@@ -431,9 +458,14 @@ header {
           color: $cventry-label-text-color;
           font-size: 10px;
           padding: 0 2px;
-          margin: 0 8px;
+          margin: 0 0 8px 0;
           vertical-align: text-bottom;
           font-weight: normal;
+          display: inline-block;
+
+          @media (max-width: $small-breakpoint) {
+            margin: 0;
+          }
 
           &.progetto-universitario:after {
             content: 'progetto universitario';
