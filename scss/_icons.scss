@@ -15,7 +15,7 @@
   content: $icomoon-phone;
 }
 
-.cv-icon:before{
+.cv-icon:before {
   content: $icomoon-clipboard;
 }
 
@@ -26,4 +26,8 @@
 
 .linkedin-icon {
   @extend .fa, .fa-linkedin-square;
+}
+
+.stackoverflow-icon {
+  @extend .fa, .fa-stack-overflow;
 }

@@ -104,7 +104,9 @@ exports.LANG_EN_TRANS = {
     'univpm_name': 'Università Politecnica delle Marche',
     'univpm_location': 'Ancona, Italy',
     'univpm_bsc_title': 'BSc in Computer Engineering and Automation',
-    'univpm_bsc_dates': 'Sep. 2012 - Dec. 2015'
+    'univpm_bsc_dates': 'Sep. 2012 - Dec. 2015',
+    'univpm_msc_title': 'MSc in Computer Engineering and Automation',
+    'univpm_msc_dates': 'Sep. 2015 - Nowadays'
 };
 
 },{}],5:[function(require,module,exports){
@@ -128,7 +130,9 @@ exports.LANG_IT_TRANS = {
     'univpm_name': 'Università Politecnica delle Marche',
     'univpm_location': 'Ancona',
     'univpm_bsc_title': 'Laurea Triennale in Ingegneria Informatica e dell\'Automazione',
-    'univpm_bsc_dates': 'Set. 2012 - Dic. 2015'
+    'univpm_bsc_dates': 'Set. 2012 - Dic. 2015',
+    'univpm_msc_title': 'Laurea Magistrale in Ingegneria Informatica e dell\'Automazione',
+    'univpm_msc_dates': 'Set. 2015 - Presente'
 };
 
 },{}],6:[function(require,module,exports){

@@ -4994,7 +4994,7 @@ meta.foundation-mq-topbar {
 .text-right {
   text-align: right !important; }
 
-.text-center, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon, .profile-card-wrapper .profile-card .profile-data .contacts-socials {
+.text-center, .profile-card-wrapper .profile-card .profile-data .contacts-details .detail .icon, .profile-card-wrapper .profile-card .profile-data .contacts-socials, .profile-card-wrapper .profile-card .profile-data .banners {
   text-align: center !important; }
 
 .text-justify {
@@ -6401,7 +6401,7 @@ th.hide-for-touch {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .github-icon, .linkedin-icon {
+.fa, .github-icon, .linkedin-icon, .stackoverflow-icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -6458,10 +6458,10 @@ th.hide-for-touch {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon {
+.fa.fa-pull-left, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon, .fa-pull-left.stackoverflow-icon {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon {
+.fa.fa-pull-right, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon, .fa-pull-right.stackoverflow-icon {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -6471,10 +6471,10 @@ th.hide-for-touch {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.github-icon, .pull-left.linkedin-icon {
+.fa.pull-left, .pull-left.github-icon, .pull-left.linkedin-icon, .pull-left.stackoverflow-icon {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.github-icon, .pull-right.linkedin-icon {
+.fa.pull-right, .pull-right.github-icon, .pull-right.linkedin-icon, .pull-right.stackoverflow-icon {
   margin-left: .3em; }
 
 .fa-spin {
@@ -7595,7 +7595,7 @@ th.hide-for-touch {
 .fa-dropbox:before {
   content: ""; }
 
-.fa-stack-overflow:before {
+.fa-stack-overflow:before, .stackoverflow-icon:before {
   content: ""; }
 
 .fa-instagram:before {
@@ -8792,7 +8792,7 @@ th.hide-for-touch {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .github-icon, .linkedin-icon {
+.fa, .github-icon, .linkedin-icon, .stackoverflow-icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -8849,10 +8849,10 @@ th.hide-for-touch {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon {
+.fa.fa-pull-left, .fa-pull-left.github-icon, .fa-pull-left.linkedin-icon, .fa-pull-left.stackoverflow-icon {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon {
+.fa.fa-pull-right, .fa-pull-right.github-icon, .fa-pull-right.linkedin-icon, .fa-pull-right.stackoverflow-icon {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -8862,10 +8862,10 @@ th.hide-for-touch {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.github-icon, .pull-left.linkedin-icon {
+.fa.pull-left, .pull-left.github-icon, .pull-left.linkedin-icon, .pull-left.stackoverflow-icon {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.github-icon, .pull-right.linkedin-icon {
+.fa.pull-right, .pull-right.github-icon, .pull-right.linkedin-icon, .pull-right.stackoverflow-icon {
   margin-left: .3em; }
 
 .fa-spin {
@@ -9986,7 +9986,7 @@ th.hide-for-touch {
 .fa-dropbox:before {
   content: ""; }
 
-.fa-stack-overflow:before {
+.fa-stack-overflow:before, .stackoverflow-icon:before {
   content: ""; }
 
 .fa-instagram:before {
@@ -11385,7 +11385,9 @@ header {
   padding: 5px; }
   .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link {
     padding: 5px;
-    color: inherit; }
+    color: inherit;
+    margin-left: 5px;
+    margin-right: 5px; }
     @media screen {
       .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link {
         font-size: 32px; } }
@@ -11396,6 +11398,10 @@ header {
       color: #171515; }
     .profile-card-wrapper .profile-card .profile-data .contacts-socials .social-link .linkedin-icon {
       color: #0077B5; }
+
+.profile-card-wrapper .profile-card .profile-data .banners {
+  border-top: 1px solid #e6e6e6;
+  padding: 5px; }
 
 .content-card {
   padding: 10px 20px;

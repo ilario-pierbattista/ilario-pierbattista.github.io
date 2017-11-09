@@ -242,6 +242,8 @@ header {
         .social-link {
           padding: 5px;
           color: inherit;
+          margin-left: 5px;
+          margin-right: 5px;
 
           @media screen {
             font-size: 32px;
@@ -258,6 +260,13 @@ header {
             color: $linkedin-light-mode;
           }
         }
+      }
+
+      .banners {
+        @extend .text-center;
+
+        border-top: 1px solid $card-hr-color;
+        padding: 5px;
       }
     }
 
