@@ -1,10 +1,13 @@
 let path = require('path');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './shared/src/index.js',
+    entry: {
+        index: './shared/src/index.js',
+    },
     output: {
-        filename: "bundle.js",
+        filename: "[name].js",
         path: path.resolve(__dirname, 'shared/dist')
     },
     module: {
@@ -23,6 +26,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('[name].css'),
+        new CopyWebpackPlugin([
+            {from: 'node_modules/reveal.js/plugin/**'},
+        ])
     ]
 };

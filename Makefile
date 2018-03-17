@@ -4,7 +4,7 @@ start:
 	docker-compose up;
 
 login:
-	docker exec -it ilariopierbattistagithubio_node_1 sh
+	docker exec -it ilariopierbattistagithubio_node_1 zsh
 
 image: image/build.target image/push.target
 
