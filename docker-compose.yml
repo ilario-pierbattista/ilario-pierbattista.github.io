@@ -1,0 +1,17 @@
+version: "3.2"
+
+services:
+  node:
+    image: ilariopierbattista/pybattme:dev
+    build:
+      context: .
+      cache_from:
+        - ilariopierbattista/pybattme:dev
+    volumes:
+      - .:/node
+    user: "node"
+    tty: true
+    ports:
+      - 8080:8080
+    hostname: 'pybatt.me'
+    command: ['http-server']
