@@ -1,7 +1,7 @@
 require('headjs/dist/1.0.0/head.min');
 let Reveal = require('reveal.js');
 require('reveal.js/css/reveal.css');
-require('reveal.js/css/theme/white.css');
+require('./theme.scss');
 
 Reveal.initialize({
     history: true,
