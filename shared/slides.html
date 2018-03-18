@@ -6,42 +6,76 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Ilario Piebattista">
-    <title>Document</title>
+    <title>Breaking down monolithic applications into microservices</title>
     <link rel="stylesheet" href="dist/index.css">
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
-        
+
         <section class="slide">
             <h1>Dal monolite ai microservizi</h1>
             <footer>Ilario Pierbattista</footer>
             <aside class="notes"></aside>
         </section>
-        
+
+        <section class="slide">
+            <h2>Il monolite</h2>
+            <img src="images/monolith.jpg" alt="">
+            <aside class="notes"></aside>
+        </section>
+
+        <section class="slide">
+            <h4>Intranet di Facile.it</h4>
+            <p>
+                <small>(Dicembre 2017)</small>
+            </p>
+            <ul>
+                <li>PHP 7.1 e Symfony 3.3</li>
+                <li>Test Funzionali</li>
+                <li>Ambiente di sviluppo isolato in docker</li>
+                <li>Gitlab Enterprise</li>
+                <li>Drone CI</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section>
+
         <section>
             <section class="slide">
-                <h2>Il monolite</h2>
-                <img src="images/monolith.jpg" alt="">
+                <h4>Docker</h4>
+                <p>Fornisce un servizio di virtualizzazione al livello di ABI.</p>
+                <p>
+                    <img src="images/containers.png" alt="Docker containers" width="25%">
+                    <img src="images/classic_vm.png" alt="OS Virtualization" width="25%">
+                </p>
+                <p>I <b>container</b> sono astrazioni al livello applicazione che incapsulano e dipendenze.</p>
+                <p>Sono istanze eseguibili delle <b>immagini</b> che li definiscono.</p>
                 <aside class="notes"></aside>
             </section>
 
             <section class="slide">
-                <h4>Intranet di Facile.it</h4>
-                <ul>
-                    <li>PHP 7.1</li>
-                    <li>Symfony 3.3</li>
-                    <li>Ambiente di sviluppo isolato in un container docker</li>
-                    <li>Phing</li>
-                    <li>Test Funzionali</li>
-                </ul>
-                <aside class="notes">Hello </aside>
-            </section>
-
-            <section class="slide">
-                <h4>Bene, ma non benissimo</h4>
+                <h4>Ambiente di sviluppo isolato in docker</h4>
+                <p>I nuovi sviluppatori trovano immediatamente un ambiente configurato e funzionante.</p>
+                <p>Basta eseguire:</p>
+                <pre>$ docker-compose up -d</pre>
                 <aside class="notes"></aside>
             </section>
+
+
+        </section>
+
+        <section class="slide">
+            <h4>Intranet di Facile.it</h4>
+            <p>
+                <small>(Aprile 2018)</small>
+            </p>
+            <ul>
+                <li>PHP 7.2 e Symfony 3.4</li>
+                <li>Ambienti di sviluppo e staging in docker</li>
+                <li>Gitlab Enterprise come git repository, image registry, CI, CD</li>
+                <li>Kubernetes</li>
+            </ul>
+            <aside class="notes"></aside>
         </section>
     </div>
 </div>
