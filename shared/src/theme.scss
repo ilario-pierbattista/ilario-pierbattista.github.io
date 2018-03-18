@@ -46,6 +46,7 @@ img.borderless {
 
 .image-box {
   img {
-    width: 30vw;
+    max-width: 30vw;
+    max-height: 40vh;
   }
 }
