@@ -1,9 +1,0 @@
-/.sass-cache/*
-*.DS_Store
-### Sass template
-.sass-cache/
-*.css.map
-
-.idea
-node_modules
-!shared/dist/node_modules
